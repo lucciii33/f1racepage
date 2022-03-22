@@ -17,7 +17,7 @@ export const Demo = () => {
 					<div>
 						<div className="dropdown">
 							<button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-								<img  src={icon} style={{width: '35px', height: '35px'}}></img>
+								<img  src={icon} style={{width: '40px', height: '35px'}}></img>
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -35,7 +35,7 @@ export const Demo = () => {
 						<a className="let m-2">Other</a>
 					</div>
 					<div>
-						<button className="btn1">Lest Race</button>
+						<button className="btn">Lest Race</button>
 					</div>
 				</div>
 
