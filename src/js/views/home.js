@@ -52,8 +52,8 @@ export const Home = ({ counter }) => {
 
 	switchClockStatus();
 	return (
-		<div className=" mt-5 ">
-			<div className=" ">
+		<div className="container mt-5 ">
+			<div className="conta">
 				<div>
 					<div className='semaforo m-2 mb-0'>
 
@@ -82,7 +82,10 @@ export const Home = ({ counter }) => {
 				</div>
 
 			</div>
+
+			<div className="m-auto">
 			<Link to="demo"><button className={buttonColor == "reeed" ? "greeey": buttonColor1 =='greeen'? 'reeed' : 'greeen'}>Start here</button></Link>	
+			</div>
 
 		</div>
 	)
