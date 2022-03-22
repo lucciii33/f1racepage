@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import F1Car from "../../img/f1.png";
+import grey from "../../img/greyBG.jpg";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
@@ -9,35 +10,33 @@ export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
-			<br />
+		<div className="background position-relative">
+			
+				<img src={grey} className=''></img>
+			
+			<div className=" position-absolute bottom-50 end-50">
+				<div className="d-flex justify-content-around">
+
+				<div>
+					<h1>LOGO</h1>
+				</div>
+				<div>
+					<a className="m-2">shop</a>
+					<a className="m-2">Our History</a>
+					<a className="m-2">Conacts</a>
+					<a className="m-2">News</a>
+					<a className="m-2">Other</a>
+				</div>
+				<div>
+					<h2>dddd</h2>
+				</div>
+
+				</div>
+			 <img src={F1Car} style={{width: "100%", height: '18rem', objectFit: "cover"}}></img>
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>
 			</Link>
+			</div>
 		</div>
 	);
 };

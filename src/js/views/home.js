@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+
 import "../../styles/home.css";
 import propTypes from "prop-types";
 import reactDom from "react-dom";
@@ -20,8 +20,8 @@ export const Home = ({ counter }) => {
 
 	const [colors, setColors] = useState(history[history.length-1]); 
 	const [time, setTime] = useState(0); 
-	const [buttonColor, setButtonColor]=useState('grey')
-	const [buttonColor1, setButtonColor1]=useState('red')
+	const [buttonColor, setButtonColor]=useState('reeed')
+	 const [buttonColor1, setButtonColor1]=useState('greeen')
 	useEffect(()=>{
 		setInterval(()=>{
 		if(history.length>0)setColors(history.pop())
@@ -30,18 +30,19 @@ export const Home = ({ counter }) => {
 
 	var timer = null;
 	function switchColor() {
-		if (buttonColor == "grey") setButtonColor("red");
+		if (buttonColor == "reeed") setButtonColor("greeey");
 	}
-	function switchColor1() {
-		if (buttonColor1 == "red") setButtonColor("green");
-	}
+	  function switchColor1() {
+	 	if (buttonColor1 == 'greeen') setButtonColor1("reeed");
+	 }
 	function switchClockStatus() {
 		if (timer == null) {
-			timer = setInterval(switchColor1, 2000);
+			timer = setInterval(switchColor, 2000);
 			console.log(timer);
-		} if(timer == timer){
-			timer = setInterval(switchColor1, 6000);
 		}
+		  if(timer == timer){
+		  	timer = setInterval(switchColor1, 7000);
+		 }
 		else {
 			clearInterval(timer);
 			timer = null;
@@ -81,7 +82,7 @@ export const Home = ({ counter }) => {
 				</div>
 
 			</div>
-			<Link to="demo"><button className={buttonColor == "grey" ? "red" :buttonColor=='red'? "gren":'grey'}>Start here</button></Link>	
+			<Link to="demo"><button className={buttonColor == "reeed" ? "greeey": buttonColor1 =='greeen'? 'reeed' : 'greeen'}>Start here</button></Link>	
 
 		</div>
 	)
