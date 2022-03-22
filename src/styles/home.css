@@ -1,0 +1,36 @@
+.semaforo{
+    background-color: black;
+    height: 55px;
+    width: 339px;
+    color: red;
+}
+.sema{
+    background-color: black;
+    height: 80px;
+    width: 55px;
+    position: relative;
+}
+
+.grey{
+    background-color: grey;
+
+}
+.red{
+    background-color: red;
+}
+.green{
+    
+    background-color: green;
+    
+} 
+.light{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
