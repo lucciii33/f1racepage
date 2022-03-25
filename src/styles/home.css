@@ -5,13 +5,31 @@ body{
     background-color: black;
     height: 55px;
     width: 339px;
-    color: red;
+    color: white;
+}
+.tubo{
+    background-color: black;
+    height: 20px;
+    width: 100%;
+}
+.tuboSombra{
+    background-color:  #353839;;
+    height: 10px;
+    width: 100%;
 }
 .sema{
     background-color: black;
     height: 80px;
     width: 55px;
-    position: relative;
+    
+}
+.sombra{
+    background-color: #353839;
+    height: 70px;
+    width: 50px;
+    border-radius: 40%;
+    position: absolute;
+    margin:3px
 }
 
 .grey{

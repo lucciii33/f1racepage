@@ -54,10 +54,13 @@ export const Home = ({ counter }) => {
 	return (
 		<div className="container mt-5 ">
 			<div className="conta">
+					<div className="tubo">
+						<div className="tuboSombra m-2"></div>
+						
+					</div>
 				<div>
 					<div className='semaforo m-2 mb-0'>
-
-						
+						<p className="d-flex justify-content-center"><strong className="mt-3">Are you Ready</strong></p>
 					</div>
 
 
@@ -65,7 +68,10 @@ export const Home = ({ counter }) => {
 					<div className="d-flex mt-0">
 						{colors.map((c, index) => {
 							return <div className="sema m-2 mt-0">
+								<div className="sombra">
+
 								<div className={`${c} light`} key={index}></div>
+								</div>
 							</div>
 						})}
 					</div>
@@ -75,7 +81,10 @@ export const Home = ({ counter }) => {
 					<div className="d-flex mt-0">
 						{colors.map((c, index) => {
 							return <div className="sema m-2 mt-0">
+								<div className="sombra">
+
 								<div className={`${c} light`} key={index}></div>
+								</div>
 							</div>
 						})}
 					</div>
