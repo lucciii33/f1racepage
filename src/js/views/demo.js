@@ -17,7 +17,7 @@ export const Demo = () => {
 					<div>
 						<div className="dropdown">
 							<button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-								<img  src={icon} style={{width: '40px', height: '35px'}}></img>
+								<img src={icon} style={{ width: '40px', height: '35px' }}></img>
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -46,9 +46,25 @@ export const Demo = () => {
 			<div className="d-flex justify-content-center mt-5">
 				<img src={F1Car} className=''></img>
 			</div>
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+			<div className="position-relative">
+
+
+			<ul class="position-absolute top-50 start-0 translate-middle-y nav flex-column">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Active</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				</li>
+			</ul>
+			</div>
+
 		</div>
 	);
 };

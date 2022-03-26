@@ -57,10 +57,9 @@ export const Home = ({ counter }) => {
 					<div className="tubo">
 						<div className="tuboSombra m-2"></div>
 						
-					</div>
 				<div>
 					<div className='semaforo m-2 mb-0'>
-						<p className="d-flex justify-content-center"><strong className="mt-3">Are you Ready</strong></p>
+						<p className="d-flex justify-content-center"><Link to="demo"><button className={buttonColor == "reeed" ? "greeey": buttonColor1 =='greeen'? 'reeed' : 'greeen'} style={{borderRadius: '20px', width: '125px', height: '40px', }}>Start here</button></Link></p>
 					</div>
 
 
@@ -92,10 +91,8 @@ export const Home = ({ counter }) => {
 
 			</div>
 
-			<div className="m-auto">
-			<Link to="demo"><button className={buttonColor == "reeed" ? "greeey": buttonColor1 =='greeen'? 'reeed' : 'greeen'}>Start here</button></Link>	
 			</div>
-
+			
 		</div>
 	)
 }

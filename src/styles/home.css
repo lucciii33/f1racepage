@@ -10,12 +10,12 @@ body{
 .tubo{
     background-color: black;
     height: 20px;
-    width: 100%;
+    width: 950px;
 }
 .tuboSombra{
     background-color:  #353839;;
     height: 10px;
-    width: 100%;
+    width: 950px;
 }
 .sema{
     background-color: black;
