@@ -1,0 +1,1085 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        2.0015904903411865,
+        2.0015904903411865,
+        0.30044636130332947
+      ],
+      "min": [
+        -2.001591444015503,
+        -2.0015909671783447,
+        -0.30044636130332947
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 786384,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9999990463256836,
+        0.999998152256012,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.999997615814209,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        3.4824647903442383,
+        3.4776687622070313
+      ],
+      "min": [
+        -2.482464551925659,
+        -2.479046106338501
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 524256,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        3.4824647903442383,
+        3.4776687622070313
+      ],
+      "min": [
+        -2.482464551925659,
+        -2.479046106338501
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 178587,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 16210,
+      "max": [
+        2.0015904903411865,
+        1.9997591972351074,
+        0.30044636130332947
+      ],
+      "min": [
+        -2.001591444015503,
+        -2.0015909671783447,
+        -0.30044636130332947
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1767288,
+      "componentType": 5126,
+      "count": 16210,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 1048512,
+      "componentType": 5126,
+      "count": 16210,
+      "max": [
+        0.999208927154541,
+        0.9996570944786072,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999712705612183,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1048512,
+      "componentType": 5126,
+      "count": 16210,
+      "max": [
+        3.4789652824401855,
+        3.4199376106262207
+      ],
+      "min": [
+        -2.482464551925659,
+        -2.479046106338501
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1178192,
+      "componentType": 5126,
+      "count": 16210,
+      "max": [
+        3.4789652824401855,
+        3.4199376106262207
+      ],
+      "min": [
+        -2.482464551925659,
+        -2.479046106338501
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 714348,
+      "componentType": 5125,
+      "count": 40857,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1961808,
+      "componentType": 5126,
+      "count": 4688,
+      "max": [
+        1.37729811668396,
+        1.377298355102539,
+        0.8967138528823853
+      ],
+      "min": [
+        -1.3772990703582764,
+        -1.3772988319396973,
+        0.2824043035507202
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2018064,
+      "componentType": 5126,
+      "count": 4688,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1307872,
+      "componentType": 5126,
+      "count": 4688,
+      "max": [
+        0.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 877776,
+      "componentType": 5125,
+      "count": 21372,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2074320,
+      "componentType": 5126,
+      "count": 29580,
+      "max": [
+        1.3106144666671753,
+        1.3742966651916504,
+        0.41040968894958496
+      ],
+      "min": [
+        -1.3122315406799316,
+        -1.3742858171463013,
+        0.2150951623916626
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2429280,
+      "componentType": 5126,
+      "count": 29580,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1345376,
+      "componentType": 5126,
+      "count": 29580,
+      "max": [
+        0.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 963264,
+      "componentType": 5125,
+      "count": 104220,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2784240,
+      "componentType": 5126,
+      "count": 2506,
+      "max": [
+        3.818206787109375,
+        1.0523661375045776,
+        1.674105167388916
+      ],
+      "min": [
+        -3.899409770965576,
+        -1.065199375152588,
+        -1.4976228475570679
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2814312,
+      "componentType": 5126,
+      "count": 2506,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1582016,
+      "componentType": 5126,
+      "count": 2506,
+      "max": [
+        1.000000238418579,
+        1.0000001192092896
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1380144,
+      "componentType": 5125,
+      "count": 10620,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2844384,
+      "componentType": 5126,
+      "count": 72,
+      "max": [
+        1.5594276189804077,
+        0.27797073125839233,
+        1.6772054433822632
+      ],
+      "min": [
+        -1.9425315856933594,
+        -0.7285367250442505,
+        -1.5007232427597046
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2845248,
+      "componentType": 5126,
+      "count": 72,
+      "max": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        -0.5881067514419556,
+        -0.11844536662101746,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1602064,
+      "componentType": 5126,
+      "count": 72,
+      "max": [
+        0.9708571434020996,
+        0.590840756893158
+      ],
+      "min": [
+        0.1577724814414978,
+        0.35930687189102173
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1422624,
+      "componentType": 5125,
+      "count": 204,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2846112,
+      "componentType": 5126,
+      "count": 5292,
+      "max": [
+        2.5944128036499023,
+        0.9918904304504395,
+        1.5695778131484985
+      ],
+      "min": [
+        -2.214298725128174,
+        -0.036956191062927246,
+        -1.0351184606552124
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2909616,
+      "componentType": 5126,
+      "count": 5292,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9992308616638184
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1602640,
+      "componentType": 5126,
+      "count": 5292,
+      "max": [
+        0.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1423440,
+      "componentType": 5125,
+      "count": 30852,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2973120,
+      "componentType": 5126,
+      "count": 7380,
+      "max": [
+        2.643644332885742,
+        0.9271265268325806,
+        1.0482759475708008
+      ],
+      "min": [
+        -2.726001262664795,
+        -0.8589828014373779,
+        -0.8717933893203735
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3061680,
+      "componentType": 5126,
+      "count": 7380,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1644976,
+      "componentType": 5126,
+      "count": 7380,
+      "max": [
+        1.0000003576278687,
+        1.0000001192092896
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1546848,
+      "componentType": 5125,
+      "count": 33600,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3150240,
+      "componentType": 5126,
+      "count": 3732,
+      "max": [
+        2.523736000061035,
+        0.5028868913650513,
+        0.8648555278778076
+      ],
+      "min": [
+        -2.605311393737793,
+        -0.8008710145950317,
+        -0.6883730888366699
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3195024,
+      "componentType": 5126,
+      "count": 3732,
+      "max": [
+        0.9989803433418274,
+        0.9994518756866455,
+        1.0
+      ],
+      "min": [
+        -0.9989923238754272,
+        -0.9996241331100464,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 1307872,
+      "componentType": 5126,
+      "count": 3732,
+      "max": [
+        1.0,
+        0.8491722345352173,
+        0.9998160600662231,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.8583166599273682,
+        -0.9998160600662231,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1704016,
+      "componentType": 5126,
+      "count": 3732,
+      "max": [
+        0.9572130441665649,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1733872,
+      "componentType": 5126,
+      "count": 3732,
+      "max": [
+        0.9572130441665649,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1681248,
+      "componentType": 5125,
+      "count": 19008,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "the_86_guy (https://sketchfab.com/the_86_guy)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/brake-disk-sport-carbon-ceramic-89de11361d504f479e5cb2df427699ab",
+      "title": "Brake Disk Sport Carbon Ceramic"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1757280,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1763728,
+      "byteOffset": 1757280,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3239808,
+      "byteOffset": 3521008,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1367584,
+      "byteOffset": 6760816,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 8128400,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_clearcoat"
+  ],
+  "images": [
+    {
+      "uri": "textures/Sport_brake_disk_1_baseColor.png"
+    },
+    {
+      "uri": "textures/Sport_brake_disk_1_normal.png"
+    },
+    {
+      "uri": "textures/Logo_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Sport_brake_disk_1",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9177047505641494
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 1.0,
+          "clearcoatRoughnessFactor": 0.04
+        }
+      },
+      "name": "Sport_brake_hub_1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "roughnessFactor": 0.6882011199678967
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Bolts",
+      "pbrMetallicRoughness": {
+        "roughnessFactor": 0.2149476427189572
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Sport_brake_caliper",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.04312121001008677
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "Logo",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Brake_pads",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Brake_pads_compounds",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Rotor_Sport brake disk 1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Rotor_Sport brake disk 1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Rotor_Sport brake hub 1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Rotor_Bolts_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 17,
+            "POSITION": 16,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Caliper_Sport brake caliper_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TEXCOORD_0": 22
+          },
+          "indices": 23,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Caliper_Logo_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 25,
+            "POSITION": 24,
+            "TEXCOORD_0": 26
+          },
+          "indices": 27,
+          "material": 4,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Caliper_Bolts_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 29,
+            "POSITION": 28,
+            "TEXCOORD_0": 30
+          },
+          "indices": 31,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Caliper_Brake pads_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 33,
+            "POSITION": 32,
+            "TEXCOORD_0": 34
+          },
+          "indices": 35,
+          "material": 5,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Caliper_Brake pads compounds_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 37,
+            "POSITION": 36,
+            "TANGENT": 38,
+            "TEXCOORD_0": 39,
+            "TEXCOORD_1": 40
+          },
+          "indices": 41,
+          "material": 6,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.0013032647548243403,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.8938290759768844e-19,
+        -0.0013032647548243403,
+        0.0,
+        0.0,
+        0.0013032647548243403,
+        2.8938290759768844e-19,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "c898a623cee04286883818d7efd411a2.fbx"
+    },
+    {
+      "children": [
+        3,
+        8
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "matrix": [
+        101.06764221191406,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        101.06764221191396,
+        4.417806951950079e-06,
+        0.0,
+        0.0,
+        -4.417806951950079e-06,
+        101.06764221191396,
+        0.0,
+        4.775550405611284e-05,
+        2.9802322387695313e-05,
+        -30.36540412902832,
+        1.0
+      ],
+      "name": "Rotor"
+    },
+    {
+      "mesh": 0,
+      "name": "Rotor_Sport brake disk 1_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Rotor_Sport brake disk 1_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Rotor_Sport brake hub 1_0"
+    },
+    {
+      "mesh": 3,
+      "name": "Rotor_Bolts_0"
+    },
+    {
+      "children": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "matrix": [
+        47.772972106933594,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        47.772972106933544,
+        2.0882231031013664e-06,
+        0.0,
+        0.0,
+        -2.0882231031013664e-06,
+        47.772972106933544,
+        0.0,
+        1.9672255516052246,
+        181.62640380859375,
+        -34.5809440612793,
+        1.0
+      ],
+      "name": "Caliper"
+    },
+    {
+      "mesh": 4,
+      "name": "Caliper_Sport brake caliper_0"
+    },
+    {
+      "mesh": 5,
+      "name": "Caliper_Logo_0"
+    },
+    {
+      "mesh": 6,
+      "name": "Caliper_Bolts_0"
+    },
+    {
+      "mesh": 7,
+      "name": "Caliper_Brake pads_0"
+    },
+    {
+      "mesh": 8,
+      "name": "Caliper_Brake pads compounds_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
