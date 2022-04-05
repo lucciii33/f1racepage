@@ -59,7 +59,7 @@ export const Home = ({ counter }) => {
 						
 				<div>
 					<div className='semaforo m-2 mb-0'>
-						<p className="d-flex justify-content-center"><Link to="demo"><button className={buttonColor == "reeed" ? "greeey": buttonColor1 =='greeen'? 'reeed' : 'greeen'} style={{borderRadius: '20px', width: '125px', height: '40px', }}>Start here</button></Link></p>
+						<p className="d-flex justify-content-center"><Link to="/scene"><button className={buttonColor == "reeed" ? "greeey": buttonColor1 =='greeen'? 'reeed' : 'greeen'} style={{borderRadius: '20px', width: '125px', height: '40px', }}>Start here</button></Link></p>
 					</div>
 
 
