@@ -13,6 +13,7 @@ import {OrbitControls, useGLTF } from '@react-three/drei'
 export default function Scene({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/scene.gltf')
+  const SceneTest = new Scene({...props})
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0}>
@@ -34,7 +35,7 @@ export default function Scene({ ...props }) {
       </group>
       <Canvas className="canvas">
                     <Suspense fallback={null}>
-                        <Scene/>
+                         <SceneTest/> 
                     </Suspense>
 
                     {/* <OrbitControls enableZoom={false}></OrbitControls>
