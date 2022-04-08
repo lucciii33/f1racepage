@@ -88,3 +88,18 @@ body{
     background-color: #9B261F;
     color: white;
 }
+
+.background img{
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+        height: auto;
+}
+.main{
+    margin-top: 195px;
+}
+.cen{
+    align-items: center;
+    justify-content: center;
+}
