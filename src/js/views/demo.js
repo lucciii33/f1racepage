@@ -20,7 +20,12 @@
  		<div className="background position-relative ">
 			 	<img src={F1Car} className="image"></img>
 					 <div className="main position-absolute top-50 start-50 translate-middle">
-					 <Link to="/single"><button className="cen btn-danger">fdkfkdkd</button></Link>
+					 <Link to="/single">
+						 <button className="cen btn-danger">fdkfkdkd</button>
+					</Link>
+					<Link to="/aboutus">
+						 <button className="cen btn-danger">fdkfkdkd</button>
+					</Link>
 						 <p className="cen text-danger"><strong>Ready to shop?</strong></p>
 					 </div>
  			
