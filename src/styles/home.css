@@ -103,3 +103,10 @@ body{
     align-items: center;
     justify-content: center;
 }
+.navbartwo{
+    background-color: #16f2e1;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
