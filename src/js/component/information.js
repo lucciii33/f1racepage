@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 export const Information = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [image, setImage]=useState('')
 	return (
 		<div className="m-2">
 			<div className="card mb-3" style={{maxWidth: "540px"}}>
