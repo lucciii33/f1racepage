@@ -11,12 +11,16 @@ export const Navbar = () => {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+					<Link to="/" className="text-decoration-none">
 						<li className="nav-item">
 							<a className="nav-link active" aria-current="page" href="#">Home</a>
 						</li>
+						</Link>
+						<Link to="/aboutus" className="text-decoration-none">
 						<li className="nav-item">
 							<a className="nav-link" href="#">About us</a>
 						</li>
+						</Link>
 						<li className="nav-item dropdown">
 							<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Shop
