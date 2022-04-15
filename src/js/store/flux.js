@@ -12,8 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(data => {
-						console.log(data)
-						return setStore({ RaceSchedule: data })
+						console.log(data.MRData.RaceTable.Races)
+						return setStore({ RaceSchedule: data.MRData.RaceTable.Races })
 					})
 					.catch(err => {
 						console.error(err);
