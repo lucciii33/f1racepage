@@ -49,7 +49,7 @@ const Layout = () => {
 							<NavbarTwo/>
 						</Route>
 						<Route exact path="/RaceTime" component={RaceTime} />
-						<Route exact path="/RaceTime" component={RaceTimeMap} />
+						<Route exact path="/RaceTimeMap" component={RaceTimeMap} />
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
