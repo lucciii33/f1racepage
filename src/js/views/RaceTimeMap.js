@@ -20,11 +20,11 @@ export const RaceTimeMap = () => {
 						<p>{race.time}</p>
 						<p>{race.season}</p>
 						</div>
-						<div>
+						<div className="text-center">
 								<p>Qualifying</p>
 								<p>{race.Qualifying.time}</p>
 								<p>{race.Qualifying.time}</p>
-							</div>
+						</div>
 
 					</div>
 				)
