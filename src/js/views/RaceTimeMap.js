@@ -12,20 +12,19 @@ export const RaceTimeMap = () => {
 		<div className="d-flex flex-wrap">
 			{store.RaceSchedule.map((race)=>{
 				return(
-					<div>
-						<div>
-							<div>
-								<p>Qualifying</p>
-								<p>{race.Qualifying.time}</p>
-								<p>{race.Qualifying.time}</p>
-							</div>
-						</div>
+					<div className="m-2 p-3">
+						
 						<div className="text-center">
-						<h1>{race.Circuit.circuitName}</h1>
+						<h1 className="m-3">{race.Circuit.circuitName}</h1>
 						<p>{race.raceName}</p>
 						<p>{race.time}</p>
 						<p>{race.season}</p>
 						</div>
+						<div>
+								<p>Qualifying</p>
+								<p>{race.Qualifying.time}</p>
+								<p>{race.Qualifying.time}</p>
+							</div>
 
 					</div>
 				)
