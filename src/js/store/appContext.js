@@ -23,6 +23,7 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			state.actions.getF1Data();
+			state.actions.getShopData();
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

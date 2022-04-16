@@ -1,7 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			RaceSchedule:[]
+			RaceSchedule:[],
+			shop:[]
 			
 		},
 		actions: {
@@ -14,6 +15,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						console.log(data.MRData.RaceTable.Races)
 						return setStore({ RaceSchedule: data.MRData.RaceTable.Races })
+					})
+					.catch(err => {
+						console.error(err);
+					});
+			},
+			getShopData: () => {
+				fetch("https://3000-lucciii33-f1pageraceback-gytg1bgrijs.ws-us40.gitpod.io/product", {
+				})
+					.then(response => {
+						return response.json();
+					})
+					.then(data => {
+						console.log(data)
+						return setStore({ shop: data })
 					})
 					.catch(err => {
 						console.error(err);

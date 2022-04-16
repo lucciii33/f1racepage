@@ -10,28 +10,25 @@ export const RaceTimeMap = () => {
 	const params = useParams();
 	return (
 		<div className="d-flex flex-wrap">
-			{store.RaceSchedule.map((race)=>{
-				return(
-					<div className="m-2 p-3">
-						
+			{store.RaceSchedule.map((race) => {
+				return (
+					<div className="racesbox m-2">
+
 						<div className="text-center">
-						<h1 className="m-3">{race.Circuit.circuitName}</h1>
-						<p>{race.raceName}</p>
-						<p>{race.time}</p>
-						<p>{race.season}</p>
+							<h1>Qualifying</h1>
+							<p className="border-bottom border-dark">time:{race.Qualifying.time}</p>
 						</div>
 						<div className="text-center">
-								<p>Qualifying</p>
-								<p>{race.Qualifying.time}</p>
-								<p>{race.Qualifying.time}</p>
+							<h1 className="m-3">{race.Circuit.circuitName}</h1>
+							<h2>{race.raceName}</h2>
+							<p>time:{race.time}</p>
+							<p>{race.season}</p>
 						</div>
 
 					</div>
 				)
 			})}
-                 
-				
-		
+
 		</div>
 	);
 };
