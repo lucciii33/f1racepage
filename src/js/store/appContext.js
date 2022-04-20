@@ -22,7 +22,7 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			state.actions.getF1Data();
+			// state.actions.getF1Data();
 			state.actions.getShopData();
 		}, []);
 
