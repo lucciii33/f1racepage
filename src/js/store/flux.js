@@ -21,7 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-gytg1bgrijs.ws-us40.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us34.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();

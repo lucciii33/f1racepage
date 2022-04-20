@@ -8,7 +8,7 @@ export const Single = ({data}) => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="d-flex flex-wrap">
+		<div className="d-flex flex-wrap justify-content-center">
 			{store.shop.map((product, index)=><Card  data={{
                     value1: product.image,
                     value2: product.description,
