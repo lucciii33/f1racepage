@@ -4,12 +4,12 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Card } from "../component/card";
 
-export const Single = ({data}) => {
+export const WomanShop = ({data}) => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
 		<div className="d-flex flex-wrap justify-content-center">
-			{store.shop.map((product, index)=><Card  data={{
+			{store.shop.filter(product => product.gender === 'women').map((product, index)=><Card  data={{
                     value1: product.image,
                     value2: product.description,
 					value3: product.price,
@@ -20,7 +20,6 @@ export const Single = ({data}) => {
 		</div>
 	);
 };
-
-Single.propTypes = {
+WomanShop.propTypes = {
 	match: PropTypes.object
 };

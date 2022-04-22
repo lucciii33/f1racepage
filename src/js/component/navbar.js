@@ -27,7 +27,7 @@ export const Navbar = () => {
 							</a>
 							<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li><a className="dropdown-item" href="#">Mens</a></li>
-								<li><a className="dropdown-item" href="#">Women</a></li>
+								<li><a className="dropdown-item" href="/womanshop">Women</a></li>
 								<li><a className="dropdown-item" href="#">Kids</a></li>
 							</ul>
 						</li>
