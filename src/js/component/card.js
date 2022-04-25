@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 export const Card = ({data}) => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const [colorButton, setColorButton] = useState("button-25");
 	return (
 		<div className="m-2">
 			<div className="card" style={{width: "18rem"}}>
@@ -13,11 +14,21 @@ export const Card = ({data}) => {
 				<div className="card-body">
 					<h5 className="card-title">{data.value2}</h5>
 					<p className="card-text">{data.value3}$</p>
-					<Link to={{ pathname: "information/" + data.name, state: data }} className="text-decoration-none">
-                <button className="button-24 d-flex justify-content-between m-1">
+					<div className="d-flex justify-content-between m-1">
+
+				<Link to={{ pathname: "information/" + data.name, state: data }} className="text-decoration-none">
+                <button className="button-24 ">
                   See Instructions
                 </button>
               </Link>
+			  <button className={colorButton == "button-25" ? "button-24" : "button-25"}
+                onClick={() => {
+                  actions.addCarShop(data), 
+				   setColorButton("button-24");
+                }}
+				
+				>add Car</button>
+					</div>
 				</div>
 			</div>
 		</div>

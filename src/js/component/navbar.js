@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+
 
 export const Navbar = () => {
+	
+const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -11,15 +15,15 @@ export const Navbar = () => {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-					<Link to="/" className="text-decoration-none">
-						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
+						<Link to="/" className="text-decoration-none">
+							<li className="nav-item">
+								<a className="nav-link active" aria-current="page" href="#">Home</a>
+							</li>
 						</Link>
 						<Link to="/aboutus" className="text-decoration-none">
-						<li className="nav-item">
-							<a className="nav-link" href="#">About us</a>
-						</li>
+							<li className="nav-item">
+								<a className="nav-link" href="#">About us</a>
+							</li>
 						</Link>
 						<li className="nav-item dropdown">
 							<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,13 +39,38 @@ export const Navbar = () => {
 							<a className="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
 						</li>
 					</ul>
-					<div className="buttons">
-							<a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-user-plus me-1"></i>register</a>
-							<a  href="" className="btn btn-outline-dark m-1" ><i className="fas fa-sign-out-alt me-1"></i>
+					<div className="buttons d-flex">
+						<a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-user-plus me-1"></i>register</a>
+						<a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-sign-out-alt me-1"></i>
 							Sign in</a>
-							<a  href="" className="btn btn-outline-dark m-1" >
-							<i className="fas fa-cart-plus me-1"></i>
-								Card(0)</a>
+						<ul className="navbar-nav ">
+							<li className="nav-item dropdown">
+								<button
+									className="btn btn-outline-dark m-1 nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									<i className="fas fa-cart-plus me-1"></i>
+									Card({store.carShop.length}) 
+								</button>
+								<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+									{store.carShop.map((fav, i) => {
+										return (
+											<li key={i}>
+												<Link to={{ pathname: "information/" + fav.name, state: fav }}>{fav.value2}</Link>
+												 <i
+													className="fas fa-trash-alt m-2"
+													onClick={() => actions.deleteFav(fav)}
+												></i> 
+											</li>
+										);
+									})}
+								</ul>
+							</li>
+						</ul>
 					</div>
 					<i className="far fa-cart-plus"></i>
 				</div>

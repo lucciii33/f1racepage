@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			RaceSchedule:[],
-			shop:[]
+			shop:[],
+			carShop: []
 			
 		},
 		actions: {
@@ -21,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// },
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us41.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us42.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();
@@ -34,7 +35,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error(err);
 					});
 			},
-		}
+
+			addCarShop: (fav)=>{
+				let favorites = getStore().carShop;
+        const found = favorites.find((item) => item == fav);
+        if (found) {
+          favorites = favorites.filter((element) => element !== fav);
+        } else {
+          favorites.push(fav);
+        }
+        // reset the global store
+        setStore({ carShop: favorites });
+			}
+		},
+		deleteFav: (fav) => {
+			var deleteFavo = getStore().carShop;
+			let delet = deleteFavo.filter((element) => element !== fav)
+			setStore({ carShop: delet });
+		},
 	};
 };
 
