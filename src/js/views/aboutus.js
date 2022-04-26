@@ -16,8 +16,8 @@ export const AboutUs = props => {
 			</img> 
 				<div className="position-absolute top-50 end-0 translate-middle-y text-center me-2">
 					<h1>Maiele Racing</h1>
-					<h3>have been found by Angelo Maiele in 2022</h3>
-					<h5>Its been 1 year word shipping amazong f1 products and information</h5>
+					<h3>Lorem ipsum lorem ipsum in 2022</h3>
+					<h5>Lorem ipsum is placeholder text commonly used in the graphic.</h5>
 					<p className="m-4">for all those fans rigth there, also you have a lot information about f1 like races, times, tracks etc</p>
 					<button className="button-24">visit here!</button>
 				</div>
