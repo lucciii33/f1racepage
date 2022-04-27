@@ -9,17 +9,24 @@ export const Information = ({data}) => {
 	const params = useParams();
 	const [image, setImage] = useState('')
 	return (
-		<div className="m-2">
-			<div className="card mb-3" style={{maxWidth: '540px'}}>
+		<div className="m-2 mt-5 d-flex justify-content-center">
+			<div className="card  mb-3" style={{maxWidth: '800px'}}>
 				<div className="row g-0">
 					<div className="col-md-4">
 						<img src={data.value1} className="img-fluid rounded-start" alt="..."/>
 					</div>
 					<div className="col-md-8">
-						<div className="card-body">
-							<h5 className="card-title">{data.value2}</h5>
-							<p className="card-text">{data.value3}$</p>
-							<button className="button-24">Add to card</button>
+						<div className="card-body me-5">
+							<h5 className="card-title m-2">{data.value2}</h5>
+							<p className="card-text m-2">{data.value3}$</p>
+							<button className="button-24 m-2">Add to card</button>
+							<div className="d-flex m-2">
+								<div className="m-2 messu">XS</div>
+								<div className="m-2 messu">S</div>
+								<div className="m-2 messu">M</div>
+								<div className="m-2 messu">L</div>
+								<div className="m-2 messu">XL</div>
+							</div>
 							<p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
 						</div>
 					</div>

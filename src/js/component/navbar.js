@@ -46,7 +46,7 @@ const { store, actions } = useContext(Context);
 						<ul className="navbar-nav ">
 							<li className="nav-item dropdown">
 								<button
-									className="btn btn-outline-dark m-1 nav-link dropdown-toggle"
+									className="btn btn-outline-secondary m-1 nav-link dropdown-toggle"
 									href="#"
 									id="navbarDropdown"
 									role="button"
@@ -60,7 +60,7 @@ const { store, actions } = useContext(Context);
 									{store.carShop.map((fav, i) => {
 										return (
 											<li key={i}>
-												<Link to={{ pathname: "information/" + fav.name, state: fav }}>{fav.value2}</Link>
+												<Link to={{ pathname: "information/" + fav.name, state: fav }} className="text-decoration-none text-dark">{fav.value2}</Link>
 												 <i
 													className="fas fa-trash-alt m-2"
 													onClick={() => actions.deleteFav(fav)}
