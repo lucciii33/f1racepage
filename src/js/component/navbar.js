@@ -4,8 +4,8 @@ import { Context } from "../store/appContext";
 
 
 export const Navbar = () => {
-	
-const { store, actions } = useContext(Context);
+
+	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -54,20 +54,23 @@ const { store, actions } = useContext(Context);
 									aria-expanded="false"
 								>
 									<i className="fas fa-cart-plus me-1"></i>
-									Card({store.carShop.length}) 
+									Card({store.carShop.length})
 								</button>
 								<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 									{store.carShop.map((fav, i) => {
 										return (
 											<li key={i}>
 												<Link to={{ pathname: "information/" + fav.name, state: fav }} className="text-decoration-none text-dark">{fav.value2}</Link>
-												 <i
+												<i
 													className="fas fa-trash-alt m-2"
 													onClick={() => actions.deleteFav(fav)}
-												></i> 
+												></i>
 											</li>
 										);
 									})}
+									<Link to="/resultproducts">
+										<li>See favorites</li>
+									</Link>
 								</ul>
 							</li>
 						</ul>

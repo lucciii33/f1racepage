@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// },
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us42.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us43.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();
