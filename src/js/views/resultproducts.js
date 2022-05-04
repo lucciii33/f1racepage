@@ -13,7 +13,7 @@ export const ResultProducts = ({ fav }) => {
 	return (
 		<div className="d-flex flex-wrap justify-content-center m-5">
 			{
-				store.carShop.map((fav, i) => {
+				store.carShop.map((fav, id) => {
 
 					return (
 
@@ -39,7 +39,7 @@ export const ResultProducts = ({ fav }) => {
 													setItemCount(itemCount + 1);
 												}}
 											>+</button>
-											<h5>{itemCount}</h5>
+											<h6>{itemCount}</h6>
 											<button className="button-24 m-1" style={{  height: "15px", width:"25px"}}
 												onClick={() => {
 													setItemCount(itemCount - 1);
