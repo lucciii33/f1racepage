@@ -13,7 +13,8 @@ export const Single = ({data}) => {
                     value1: product.image,
                     value2: product.description,
 					value3: product.price,
-					value4: product.gender
+					value4: product.gender,
+					value5: product.id
                   }}
                   key={index}
 				  />)}

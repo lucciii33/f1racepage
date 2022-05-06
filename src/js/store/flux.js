@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// },
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us43.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us44.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();
@@ -38,6 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addCarShop: (fav)=>{
 				let favorites = getStore().carShop;
+				console.log(favorites)
         const found = favorites.find((item) => item == fav);
         if (found) {
           favorites = favorites.filter((element) => element !== fav);

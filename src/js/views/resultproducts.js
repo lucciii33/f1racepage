@@ -24,7 +24,7 @@ export const ResultProducts = ({ fav }) => {
 									<th>product</th>
 									<th>price</th>
 									<th>Quantity</th>
-									<th>Total price</th>
+									{/* <th>Total price</th> */}
 									<th>remove</th>
 								</tr>
 								<tr>
@@ -34,13 +34,13 @@ export const ResultProducts = ({ fav }) => {
 									<td className="align-middle" >
 										<div className="d-flex ">
 
-											<button className="button-24 m-1" style={{  height: "5px", width:"10px"}}
+											<button className="btn btn-danger m-1" 
 												onClick={() => {
 													setItemCount(itemCount + 1);
 												}}
 											>+</button>
 											<h6>{itemCount}</h6>
-											<button className="button-24 m-1" style={{  height: "15px", width:"25px"}}
+											<button className="btn btn-success m-1" 
 												onClick={() => {
 													setItemCount(itemCount - 1);
 												}}
@@ -49,7 +49,7 @@ export const ResultProducts = ({ fav }) => {
 
 									</td>
 
-									<td className="align-middle">${itemCount*fav.value3}</td>
+									{/* <td className="align-middle">${itemCount*fav.value3}</td> */}
 									<td className="align-middle"><button className="button-24">Remove</button></td>
 								</tr>
 							</thead>
@@ -57,6 +57,9 @@ export const ResultProducts = ({ fav }) => {
 					);
 				})
 			}
+			<div>
+				<h3></h3>
+			</div>
 		</div >
 
 
