@@ -10,7 +10,7 @@ export const DriverResults = () => {
 	const params = useParams();
 	return (
 		<div className="d-flex flex-wrap">
-			{store.driverResult.map((dri, i) => {
+			{store.driverResult.Results.map((dri, i) => {
 				return (
 					<div className="m-2">
 						<table className="table table-light table-striped">
