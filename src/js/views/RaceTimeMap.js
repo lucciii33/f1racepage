@@ -10,9 +10,9 @@ export const RaceTimeMap = () => {
 	const params = useParams();
 	return (
 		<div className="d-flex flex-wrap">
-			{store.RaceSchedule.map((race) => {
+			{store.RaceSchedule.map((race,i) => {
 				return (
-					<div className="racesbox m-2">
+					<div className="racesbox m-2" key={i}>
 
 						<div className="text-center">
 							<h1>Qualifying</h1>
@@ -29,6 +29,9 @@ export const RaceTimeMap = () => {
 				)
 			})}
 
+			<Link to="/driversresults">
+				<button></button>
+			</Link>
 		</div>
 	);
 };
