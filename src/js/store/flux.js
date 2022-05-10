@@ -29,8 +29,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(data => {
-						console.log(data.MRData.RaceTable.Races)
-						return setStore({ driverResult: data.MRData.RaceTable.Races})
+						console.log(data.MRData.RaceTable.Races[0].Results)
+						return setStore({ driverResult: data.MRData.RaceTable.Races[0].Results})
 					})
 					.catch(err => {
 						console.error(err);

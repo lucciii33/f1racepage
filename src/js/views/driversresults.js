@@ -10,9 +10,10 @@ export const DriverResults = () => {
 	const params = useParams();
 	return (
 		<div className="d-flex flex-wrap">
-			{store.driverResult.Results.map((dri, i) => {
+			{store.driverResult.map((dri, i) => {
+				
 				return (
-					<div className="m-2">
+					<div className="m-2 ms-auto" key={i}>
 						<table className="table table-light table-striped">
 							<thead>
 								<tr>
@@ -20,24 +21,29 @@ export const DriverResults = () => {
 									<th>number</th>
 									<th>Driver</th>
 									<th>Constructor</th>
-									<th>Laps</th> 
+									 <th>Laps</th> 
 									<th>Grid</th>
-									<th>Time</th> 
-									<th>Status</th>
+									<th>Time</th>  
+									 <th>Status</th> 
 									<th>Points</th>
 								</tr>
-								<tr>
-									<td className="align-middle">{dri.Results.position}</td>
-									<td className="align-middle">{dri.Results.number}$</td>
-									{/* <td>{dri.Results.Driver.familyName }</td> */}
-									<td className="align-middle" >{dri.Results.Constructor.name}</td>
-									<td>{dri.Results.laps}</td>
-									<td className="align-middle">{dri.Results.Time.time}</td>
-									<td className="align-middle">{dri.Results.status}</td>
-									<td className="align-middle" >{dri.Results.points}</td>
+
+									<tr>
+									<td className="align-middle">{dri.position}</td>
+									<td className="align-middle">{dri.number}</td>
+									<td className="d-grid align-middle">{dri.Driver.givenName} {dri.Driver.familyName }</td> 
+									<td className="align-middle" >{dri.Constructor.name}</td>
+									<td className="align-middle">{dri.laps}</td>
+									<td className="align-middle">{dri.grid}</td>
+									<td className="align-middle">{dri.FastestLap.Time.time}</td>
+									 <td className="align-middle">{dri.status}</td> 
+									<td className="align-middle" >{dri.points}</td>
 
 								
 								</tr>
+								{/* {dri.Results.map((resu, i)=>{
+								})} */}
+								
 							</thead>
 						</table>
 						
