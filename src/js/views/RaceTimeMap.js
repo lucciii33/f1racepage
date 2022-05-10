@@ -9,29 +9,36 @@ export const RaceTimeMap = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="d-flex flex-wrap">
-			{store.RaceSchedule.map((race,i) => {
-				return (
-					<div className="racesbox m-2" key={i}>
+		<div>
+			<div className="m-2 d-flex justify-content-center">
 
-						<div className="text-center">
-							<h1>Qualifying</h1>
-							<p className="border-bottom border-dark">time:{race.Qualifying.time}</p>
+				<Link to="/driversresults">
+					<button className="button-24">See drivers Results</button>
+				</Link>
+			</div>
+			<div className="d-flex flex-wrap justify-content-center">
+
+				{store.RaceSchedule.map((race, i) => {
+					return (
+						<div className="racesbox m-2" key={i}>
+
+							<div className="text-center">
+								<h1>Qualifying</h1>
+								<p className="border-bottom border-dark">time:{race.Qualifying.time}</p>
+							</div>
+							<div className="text-center">
+								<h1 className="m-3">{race.Circuit.circuitName}</h1>
+								<h2>{race.raceName}</h2>
+								<p>time:{race.time}</p>
+								<p>{race.season}</p>
+							</div>
+
 						</div>
-						<div className="text-center">
-							<h1 className="m-3">{race.Circuit.circuitName}</h1>
-							<h2>{race.raceName}</h2>
-							<p>time:{race.time}</p>
-							<p>{race.season}</p>
-						</div>
+					)
+				})}
 
-					</div>
-				)
-			})}
 
-			<Link to="/driversresults">
-				<button></button>
-			</Link>
+			</div>
 		</div>
 	);
 };

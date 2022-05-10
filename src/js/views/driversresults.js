@@ -9,11 +9,11 @@ export const DriverResults = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="d-flex flex-wrap">
+		<div className="ms-auto me-auto">
 			{store.driverResult.map((dri, i) => {
 				
 				return (
-					<div className="m-2 ms-auto" key={i}>
+					<div className="m-5" key={i}>
 						<table className="table table-light table-striped">
 							<thead>
 								<tr>

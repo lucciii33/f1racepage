@@ -112,4 +112,6 @@ body{
 }
 .racesbox{
     border: 2px solid #16f2e1;
+    width: 450px;
+    height: 380px;
 }

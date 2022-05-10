@@ -35,9 +35,11 @@ export const Navbar = () => {
 								<li><a className="dropdown-item" href="accessorieshop">accessories</a></li>
 							</ul>
 						</li>
+						<Link to="/contactus" className="text-decoration-none">
 						<li className="nav-item">
 							<a className="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
 						</li>
+						</Link>
 					</ul>
 					<div className="buttons d-flex">
 						<a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-user-plus me-1"></i>register</a>
