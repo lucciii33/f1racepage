@@ -52,25 +52,48 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			addCarShop: (fav)=>{
-				let favorites = getStore().carShop;
-				console.log(favorites)
-        const found = favorites.find((item) => item == fav);
+			addCarShop: (user_id,product_id)=>{
+		// 		let favorites = getStore().carShop;
+		// 		console.log(favorites)
+        // const found = favorites.find((item) => item == fav);
+        // if (found) {
+        //   favorites = favorites.filter((element) => element !== fav);
+        // } else {
+        //   favorites.push(fav);
+        // }
+        // // reset the global store
+        // setStore({ carShop: favorites });
+		// 	}
+
+		let storeCartShop = getStore().carShop;
+        const found = storeCartShop.find(
+          (item) => item.id == product_id
+        );
         if (found) {
-          favorites = favorites.filter((element) => element !== fav);
+          alert("That product exist");
         } else {
-          favorites.push(fav);
+        //   let favoriteString = favorites.toString();
+          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us44.gitpod.io/product", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+				user_id:  user_id,
+				product_id: product_id,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => setStore({ carShop: data }))
+            .catch((err) => console.log(err));
         }
-        // reset the global store
-        setStore({ carShop: favorites });
-			}
 		},
 		deleteFav: (fav) => {
 			var deleteFavo = getStore().carShop;
 			let delet = deleteFavo.filter((element) => element !== fav)
 			setStore({ carShop: delet });
 		},
-	};
+	}};
 };
 
 export default getState;

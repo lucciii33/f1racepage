@@ -24,7 +24,7 @@ export const ResultProducts = ({ fav }) => {
 									<th>product</th>
 									<th>price</th>
 									<th>Quantity</th>
-									{/* <th>Total price</th> */}
+									 <th>Total price</th>
 									<th>remove</th>
 								</tr>
 								<tr>
@@ -39,7 +39,7 @@ export const ResultProducts = ({ fav }) => {
 													setItemCount(itemCount + 1);
 												}}
 											>+</button>
-											<h6>{itemCount}</h6>
+											<h6 value={fav.id}>{itemCount}</h6>
 											<button className="btn btn-success m-1" 
 												onClick={() => {
 													setItemCount(itemCount - 1);
@@ -49,7 +49,7 @@ export const ResultProducts = ({ fav }) => {
 
 									</td>
 
-									{/* <td className="align-middle">${itemCount*fav.value3}</td> */}
+									 <td className="align-middle">${itemCount*fav.value3}</td> 
 									<td className="align-middle"><button className="button-24">Remove</button></td>
 								</tr>
 							</thead>
