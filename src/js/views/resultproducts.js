@@ -14,7 +14,7 @@ export const ResultProducts = ({ fav }) => {
 		<div className="d-flex flex-wrap justify-content-center m-5">
 			{
 				store.carShop.map((fav, id) => {
-
+					
 					return (
 
 						<table className="table table-light table-striped">

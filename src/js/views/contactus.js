@@ -14,7 +14,7 @@ export const ContactUs = props => {
 		<div >
 			<div className="form">
 
-			<input></input>
+			<input>ff</input>
 			<input></input>
 			<textarea></textarea>
 			</div>
