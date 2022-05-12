@@ -20,6 +20,7 @@ import { AccessorieShop } from "./views/accessorieshop";
 import { ResultProducts } from "./views/resultproducts";
 import { DriverResults } from "./views/driversresults";
 import { ContactUs } from "./views/contactus";
+import { Login } from "./views/login";
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -46,6 +47,7 @@ const Layout = () => {
 							<Single />
 						</Route>
 						<Route exact path="/information/:name" component={Information} />
+						<Route exact path="/login" component={Login} />
 						<Route exact path="/contactus" component={ContactUs} />
 						<Route exact path="/womanshop" component={WomanShop} />
 						<Route exact path="/manshop" component={ManShop} />

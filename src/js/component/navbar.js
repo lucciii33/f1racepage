@@ -67,9 +67,11 @@ export const Navbar = () => {
 													className="fas fa-trash-alt m-2"
 													onClick={() => actions.deleteFav(fav)}
 												></i>
+												
 											</li>
 										);
 									})}
+									<button onClick={()=>{console.log(store.carShop)}}>try</button>
 									<Link to="/resultproducts">
 										<li>See favorites</li>
 									</Link>

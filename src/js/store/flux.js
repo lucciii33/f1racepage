@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			addCarShop: (user_id,product_id)=>{
+			addCarShop: (price, description, image, product_id, user_id)=>{
 		// 		let favorites = getStore().carShop;
 		// 		console.log(favorites)
         // const found = favorites.find((item) => item == fav);
@@ -73,14 +73,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           alert("That product exist");
         } else {
         //   let favoriteString = favorites.toString();
-          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us44.gitpod.io/product", {
+          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us44.gitpod.io/favorite", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-				user_id:  user_id,
-				product_id: product_id,
+				price,
+				description,
+				image,
+				product_id,
+				user_id
             }),
           })
             .then((response) => response.json())
