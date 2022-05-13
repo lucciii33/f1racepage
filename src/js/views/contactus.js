@@ -11,15 +11,27 @@ export const ContactUs = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div >
-			<div className="form">
+		<div className="d-flex d-flex justify-content-between">
+			<div className="imacon m-2">
 
-			<input>ff</input>
-			<input></input>
-			<textarea></textarea>
+				<img className="contactimage" src="https://www.pixelstalk.net/wp-content/uploads/2016/10/Formula-1-Wallpaper-HD-Free-Download.jpg"></img>
 			</div>
-			<img className="contactimage" src={contact}></img> 
-			
+			<div className="originalform">
+				<div className="line">
+
+				<h6 className="">Your Name</h6>
+				</div>
+
+				<input className="form"></input>
+				<h6>Your Name</h6>
+				<input className="form"></input>
+				<h6>Your Phone</h6>
+				<input className="form"></input>
+				<h6>Wite us!</h6>
+				<textarea className="form"></textarea>
+
+			</div>
+
 		</div>
 	);
 };

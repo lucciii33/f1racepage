@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us44.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us45.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();
@@ -73,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           alert("That product exist");
         } else {
         //   let favoriteString = favorites.toString();
-          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us44.gitpod.io/favorite", {
+          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us45.gitpod.io/favorite", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
