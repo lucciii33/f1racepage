@@ -5,6 +5,7 @@ import { Context } from "../store/appContext";
 
 export const Information = ({data}) => {
 	var data = useLocation().state;
+	console.log(data)
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	const [image, setImage] = useState('')
@@ -13,12 +14,12 @@ export const Information = ({data}) => {
 			<div className="card  mb-3" style={{maxWidth: '800px'}}>
 				<div className="row g-0">
 					<div className="col-md-4">
-						<img src={data.value1} className="img-fluid rounded-start" alt="..."/>
+						<img src={data.image} className="img-fluid rounded-start" alt="..."/>
 					</div>
 					<div className="col-md-8">
 						<div className="card-body me-5">
-							<h5 className="card-title m-2">{data.value2}</h5>
-							<p className="card-text m-2">{data.value3}$</p>
+							<h5 className="card-title m-2">{data.description}</h5>
+							<p className="card-text m-2">${data.price}</p>
 							<button className="button-24 m-2">Add to card</button>
 							<div className="d-flex m-2">
 								<div className="m-2 messu">XS</div>

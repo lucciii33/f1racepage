@@ -1,11 +1,23 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { InterpolateSmooth } from "three";
 import { Context } from "../store/appContext";
 
 
 export const Navbar = () => {
 
 	const { store, actions } = useContext(Context);
+	console.log(store.carShop)
+	let task = store.carShop.map((favorite)=>{ 
+		let product = store.shop.find((item)=>{
+			if(favorite.product_id == item.id){
+				return item
+			}
+			
+		})
+		return product
+	})
+	console.log(task)
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -60,12 +72,18 @@ export const Navbar = () => {
 								</button>
 								<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 									{store.carShop.map((fav, i) => {
+										let product = store.shop.find((item)=>{
+											if(fav.product_id == item.id){
+												return item
+											}
+											
+										})
 										return (
 											<li key={i}>
-												<Link to={{ pathname: "information/" + fav.name, state: fav }} className="text-decoration-none text-dark">{fav.value2}</Link>
+												<Link to={{ pathname: "/information/" + product.id, state: product }} className="text-decoration-none text-dark">{product.description}</Link>
 												<i
 													className="fas fa-trash-alt m-2"
-													onClick={() => actions.deleteFav(fav)}
+													// onClick={() => actions.deleteFav(fav)}
 												></i>
 												
 											</li>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Card } from "../component/card";
 
-export const Single = ({data}) => {
+export const Single = () => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	var data = useLocation().state;
+	console.log(data)
 	return (
 		<div className="d-flex flex-wrap justify-content-center">
 			{store.shop.map((product, index)=><Card  data={{
