@@ -1,19 +1,26 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
-export const ResultProducts = ({ fav }) => {
+export const ResultProducts = ({ data }) => {
 	const { store, actions } = useContext(Context);
 	const [itemCount, setItemCount] = useState(0);
 	const [answer, setAnswer] = useState('')
 	const params = useParams();
+	var data = useLocation().state;
 
 	return (
 		<div className="d-flex flex-wrap justify-content-center m-5">
 			{
 				store.carShop.map((fav, id) => {
+					let product = store.shop.find((item)=>{
+						if(fav.product_id == item.id){
+							return item
+						}
+						
+					})
 					
 					return (
 
@@ -28,9 +35,9 @@ export const ResultProducts = ({ fav }) => {
 									<th>remove</th>
 								</tr>
 								<tr>
-									<td><img src={fav.value1} style={{ width: "80px" }}></img></td>
-									<td className="align-middle">{fav.value2}</td>
-									<td className="align-middle">{fav.value3}$</td>
+									<td><img src={product.image} style={{ width: "80px" }}></img></td>
+									<td className="align-middle">{product.description}</td>
+									<td className="align-middle">{product.price}$</td>
 									<td className="align-middle" >
 										<div className="d-flex ">
 
@@ -39,7 +46,7 @@ export const ResultProducts = ({ fav }) => {
 													setItemCount(itemCount + 1);
 												}}
 											>+</button>
-											<h6 value={fav.id}>{itemCount}</h6>
+											<h6 value={product.id}>{itemCount}</h6>
 											<button className="btn btn-success m-1" 
 												onClick={() => {
 													setItemCount(itemCount - 1);
@@ -49,7 +56,7 @@ export const ResultProducts = ({ fav }) => {
 
 									</td>
 
-									 <td className="align-middle">${itemCount*fav.value3}</td> 
+									 <td className="align-middle">${itemCount*product.price}</td> 
 									<td className="align-middle"><button className="button-24">Remove</button></td>
 								</tr>
 							</thead>
