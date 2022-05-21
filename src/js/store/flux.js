@@ -108,11 +108,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} )
 				.catch((err) => console.log(err));
 			},
-		deleteFav: (fav) => {
-			var deleteFavo = getStore().carShop;
-			let delet = deleteFavo.filter((element) => element !== fav)
-			setStore({ carShop: delet });
-		},
+			deleteCarShop: (id) => {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us45.gitpod.io/favorite/" + id, {
+				  method: "DELETE",
+				  headers: {
+					"Content-Type": "application/json",
+				  },
+				})
+				  .then((response) => response.json())
+				  .then((data) => setStore({ carShop: data }))
+				  .catch((err) => console.log(err));
+			  },
 	}};
 };
 
