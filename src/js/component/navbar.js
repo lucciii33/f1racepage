@@ -8,16 +8,16 @@ export const Navbar = () => {
 
 	const { store, actions } = useContext(Context);
 	console.log(store.carShop)
-	let task = store.carShop.map((favorite)=>{ 
-		let product = store.shop.find((item)=>{
-			if(favorite.product_id == item.id){
-				return item
-			}
+	// let task = store.carShop.map((favorite)=>{ 
+	// 	let product = store.shop.find((item)=>{
+	// 		if(favorite.product_id == item.id){
+	// 			return item
+	// 		}
 			
-		})
-		return product
-	})
-	console.log(task)
+	// 	})
+	// 	return product
+	// })
+	// console.log(task)
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
