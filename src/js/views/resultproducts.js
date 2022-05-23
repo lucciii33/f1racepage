@@ -12,7 +12,8 @@ export const ResultProducts = ({ data }) => {
 	var data = useLocation().state;
 
 	return (
-		<div className="d-flex flex-wrap justify-content-center m-5">
+		<div className="d-flex row"> 
+		<div className="col-md-9">
 			{
 				store.carShop.map((fav, id) => {
 					let product = store.shop.find((item)=>{
@@ -64,10 +65,13 @@ export const ResultProducts = ({ data }) => {
 					);
 				})
 			}
-			<div>
-				<h3></h3>
-			</div>
 		</div >
+			<div className="col-md-3">
+				<h3>Order summary</h3>
+				<p>items {store.carShop.length}</p>
+				<p>total cost {}</p>
+			</div>
+		</div>
 
 
 	);
