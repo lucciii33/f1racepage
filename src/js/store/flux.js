@@ -97,6 +97,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch((err) => console.log(err));
 			},
 			deleteCarShop: (id) => {
+				const store = getStore()
 				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us45.gitpod.io/favorite/" + id, {
 				  method: "DELETE",
 				  headers: {

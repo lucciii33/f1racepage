@@ -83,7 +83,7 @@ export const Navbar = () => {
 												<Link to={{ pathname: "/information/" + product.id, state: product }} className="text-decoration-none text-dark">{product.description}</Link>
 												<i
 													className="fas fa-trash-alt m-2"
-													onClick={() => actions.deleteCarShop(product.id)}
+													onClick={() => actions.deleteCarShop(fav.id)}
 												></i>
 												
 											</li>
