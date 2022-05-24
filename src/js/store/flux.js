@@ -53,18 +53,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addCarShop: (price, description, image, product_id, user_id)=>{
-		// 		let favorites = getStore().carShop;
-		// 		console.log(favorites)
-        // const found = favorites.find((item) => item == fav);
-        // if (found) {
-        //   favorites = favorites.filter((element) => element !== fav);
-        // } else {
-        //   favorites.push(fav);
-        // }
-        // // reset the global store
-        // setStore({ carShop: favorites });
-		// 	}
-
 		let storeCartShop = getStore().carShop;
         const found = storeCartShop.find(
           (item) => item.id == product_id
@@ -119,6 +107,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  .then((data) => setStore({ carShop: data }))
 				  .catch((err) => console.log(err));
 			  },
+
+			  updateCarShop: (id, quantity )=>{
+				  const store = getStore()
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us45.gitpod.io/favorite/"+ id, {
+					method: "PUT",
+					headers: {
+					  "Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						quantity,
+					}),
+				  })
+					.then((response) => response.json())
+					.then((data) =>{
+						setStore({ carShop: data.store.carShop.map(p=>{
+							if(p.id===id){
+								p.quantity = quantity
+							}
+							return p
+						}) })
+
+					} )
+					.catch((err) => console.log(err));
+				}
+			  
 	}};
 };
 
