@@ -18,8 +18,8 @@ export const Information = ({data}) => {
 					</div>
 					<div className="col-md-8">
 						<div className="card-body me-5">
-							<h5 className="card-title m-2">{data.description}</h5>
-							<p className="card-text m-2">${data.price}</p>
+							<h5 className="card-title m-2">{data.description}{data.value2}</h5>
+							<p className="card-text m-2">${data.price}{data.value3}</p>
 							<button className="button-24 m-2">Add to card</button>
 							<div className="d-flex m-2">
 								<div className="m-2 messu">XS</div>
