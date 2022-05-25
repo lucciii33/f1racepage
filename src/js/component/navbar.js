@@ -89,7 +89,7 @@ export const Navbar = () => {
 											</li>
 										);
 									})}
-									<button onClick={()=>{console.log(store.carShop)}}>try</button>
+									
 									<Link to="/resultproducts">
 										<li>See favorites</li>
 									</Link>

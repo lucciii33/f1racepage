@@ -43,14 +43,14 @@ export const ResultProducts = ({ data }) => {
 										<div className="d-flex ">
 
 											<button className="btn btn-danger m-1" 
-												onClick={(quantity) => {
+												onClick={(id, quantity) => {
 													actions.updateCarShop(product.quantity + 1)
 												}}
 											>+</button>
 											<h6>{product.quantity}</h6>
 											<button className="btn btn-success m-1" 
-												onClick={(quantity) => {
-													actions.updateCarShop(product.quantity - 1)
+												onClick={(id, quantity) => {
+													actions.updateCarShop(id, quantity)
 												}}
 											>-</button>
 										</div>
