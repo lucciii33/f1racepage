@@ -6,10 +6,21 @@ import { Context } from "../store/appContext";
 
 export const ResultProducts = ({ data }) => {
 	const { store, actions } = useContext(Context);
-	const [itemCount, setItemCount] = useState(0);
+	const [productQuantity, setProductQuantity] = useState([]);
 	const [answer, setAnswer] = useState('')
 	const params = useParams();
 	var data = useLocation().state;
+
+	
+	const addQuantity=(product)=>{
+		const exist = productQuantity.find(x => x.id === product.id);
+		if(exist){
+			setProductQuantity(productQuantity.map(x => x.id === product.id ? {...exist, quantity: exist.quantity + 1}: x ))
+		  }
+		  else {
+			setProductQuantity([...productQuantity, {...product, quantity: 1}])
+		  }
+	}
 
 	return (
 		<div className="d-flex row"> 
@@ -43,21 +54,22 @@ export const ResultProducts = ({ data }) => {
 										<div className="d-flex ">
 
 											<button className="btn btn-danger m-1" 
-												onClick={(id, quantity) => {
-													actions.updateCarShop(product.quantity + 1)
+												onClick={(product) => {
+													addQuantity(product)
+													 actions.updateCarShop(product.id)
 												}}
 											>+</button>
-											<h6>{product.quantity}</h6>
+											{/* <h6>{product}</h6> */}
 											<button className="btn btn-success m-1" 
-												onClick={(id, quantity) => {
-													actions.updateCarShop(id, quantity)
+												onClick={(product) => {
+													actions.updateCarShop()
 												}}
 											>-</button>
 										</div>
 
 									</td>
 
-									 <td className="align-middle">${itemCount*product.price}</td> 
+									 {/* <td className="align-middle">${itemCount*product.price}</td>  */}
 									<td className="align-middle"><button className="button-24">Remove</button></td>
 								</tr>
 							</thead>

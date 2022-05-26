@@ -122,7 +122,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  })
 					.then((response) => response.json())
 					.then((data) =>{
-						setStore({ carShop: data.store.carShop.map(p=>{
+						setStore({ carShop: data.store.carShop.map((p)=>{
 							if(p.id===id){
 								p.quantity = quantity
 							}
