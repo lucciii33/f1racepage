@@ -18,7 +18,7 @@ export const ResultProducts = ({ data }) => {
 			setProductQuantity(productQuantity.map(x => x.id === product.id ? {...exist, quantity: exist.quantity + 1}: x ))
 		  }
 		  else {
-			setProductQuantity([...productQuantity, {...product, quantity: 1}])
+			setProductQuantity([...productQuantity, {...product, quantity: +1 }])
 		  }
 	}
 
@@ -56,10 +56,10 @@ export const ResultProducts = ({ data }) => {
 											<button className="btn btn-danger m-1" 
 												onClick={(product) => {
 													addQuantity(product)
-													 actions.updateCarShop(product.id)
+													actions.updateCarShop(product.id)
 												}}
 											>+</button>
-											{/* <h6>{product}</h6> */}
+											 <h6>{productQuantity.length}</h6>
 											<button className="btn btn-success m-1" 
 												onClick={(product) => {
 													actions.updateCarShop()
@@ -69,7 +69,7 @@ export const ResultProducts = ({ data }) => {
 
 									</td>
 
-									 {/* <td className="align-middle">${itemCount*product.price}</td>  */}
+									  <td className="align-middle">{product.price*productQuantity.length}</td> 
 									<td className="align-middle"><button className="button-24">Remove</button></td>
 								</tr>
 							</thead>

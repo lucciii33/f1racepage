@@ -111,7 +111,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			  updateCarShop: (id, quantity )=>{
 				  const store = getStore()
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite/"+ id, {
+				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite/6`, {
 					method: "PUT",
 					headers: {
 					  "Content-Type": "application/json",
@@ -121,8 +121,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}),
 				  })
 					.then((response) => response.json())
-					.then((data) =>{
-						setStore({ carShop: data.store.carShop.map((p)=>{
+					.then(() =>{
+						setStore({ carShop: store.carShop.map((p)=>{
 							if(p.id===id){
 								p.quantity = quantity
 							}
