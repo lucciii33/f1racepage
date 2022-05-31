@@ -10,10 +10,11 @@ export const ManShop = ({data}) => {
 	return (
 		<div className="d-flex flex-wrap justify-content-center">
 			{store.shop.filter(product => product.gender === 'men').map((product, index)=><Card  data={{
-                    value1: product.image,
-                    value2: product.description,
-					value3: product.price,
-					value4: product.gender
+                    image: product.image,
+                    description: product.description,
+					price: product.price,
+					gender: product.gender,
+					id: product.id
                   }}
                   key={index}
 				  />)}

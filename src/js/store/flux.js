@@ -111,23 +111,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			  updateCarShop: (id, quantity )=>{
 				  const store = getStore()
-				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite/6`, {
+				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite/${id}`, {
 					method: "PUT",
 					headers: {
 					  "Content-Type": "application/json",
 					},
 					body: JSON.stringify({
-						quantity,
+						quantity: quantity+1,
 					}),
 				  })
 					.then((response) => response.json())
-					.then(() =>{
-						setStore({ carShop: store.carShop.map((p)=>{
-							if(p.id===id){
-								p.quantity = quantity
+					.then((data) =>{
+						let newFavorites = store.carShop.map((item)=>{
+
+							if(item.product_id == data.product_id){
+								item["quantity"]=data["quantity"]
 							}
-							return p
-						}) })
+							return item 
+						})
+						// newFavorites = [...newFavorites, data]
+						setStore({carShop: newFavorites})
 
 					} )
 					.catch((err) => console.log(err));

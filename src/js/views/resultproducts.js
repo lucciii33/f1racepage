@@ -12,21 +12,21 @@ export const ResultProducts = ({ data }) => {
 	var data = useLocation().state;
 
 	
-	const addQuantity=(product)=>{
-		const exist = productQuantity.find(x => x.id === product.id);
-		if(exist){
-			setProductQuantity(productQuantity.map(x => x.id === product.id ? {...exist, quantity: exist.quantity + 1}: x ))
-		  }
-		  else {
-			setProductQuantity([...productQuantity, {...product, quantity: +1 }])
-		  }
-	}
+	// const addQuantity=(product)=>{
+	// 	const exist = productQuantity.find(x => x.id === product.id);
+	// 	if(exist){
+	// 		setProductQuantity(productQuantity.map(x => x.id === product.id ? {...exist, quantity: exist.quantity + 1}: x ))
+	// 	  }
+	// 	  else {
+	// 		setProductQuantity([...productQuantity, {...product, quantity: quantity+1  }])
+	// 	  }
+	// }
 
 	return (
 		<div className="d-flex row"> 
 		<div className="col-md-9">
 			{
-				store.carShop.map((fav, id) => {
+				store.carShop.map((fav) => {
 					let product = store.shop.find((item)=>{
 						if(fav.product_id == item.id){
 							return item
@@ -54,15 +54,15 @@ export const ResultProducts = ({ data }) => {
 										<div className="d-flex ">
 
 											<button className="btn btn-danger m-1" 
-												onClick={(product) => {
-													addQuantity(product)
-													actions.updateCarShop(product.id)
+												onClick={() => {
+													// addQuantity(product)
+													actions.updateCarShop(fav.id, fav.quantity)
 												}}
 											>+</button>
-											 <h6>{productQuantity.length}</h6>
+											 <h6>{fav.quantity}</h6>
 											<button className="btn btn-success m-1" 
 												onClick={(product) => {
-													actions.updateCarShop()
+													// actions.updateCarShop()
 												}}
 											>-</button>
 										</div>
