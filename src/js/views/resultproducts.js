@@ -7,10 +7,9 @@ import { Context } from "../store/appContext";
 export const ResultProducts = ({ data }) => {
 	const { store, actions } = useContext(Context);
 	const [productQuantity, setProductQuantity] = useState([]);
-	const [answer, setAnswer] = useState('')
+	const [answer, setAnswer] = useState([])
 	const params = useParams();
 	var data = useLocation().state;
-
 	
 	// const addQuantity=(product)=>{
 	// 	const exist = productQuantity.find(x => x.id === product.id);
@@ -21,7 +20,9 @@ export const ResultProducts = ({ data }) => {
 	// 		setProductQuantity([...productQuantity, {...product, quantity: quantity+1  }])
 	// 	  }
 	// }
-
+	const getTotalCost = (carShop) => {
+		return carShop.reduce((totalCost, { cost: price }) => totalCost + parseFloat(price), 0);
+	  };
 	return (
 		<div className="d-flex row"> 
 		<div className="col-md-9">
@@ -33,7 +34,6 @@ export const ResultProducts = ({ data }) => {
 						}
 						
 					})
-					
 					return (
 
 						<table className="table table-light table-striped">
@@ -61,7 +61,7 @@ export const ResultProducts = ({ data }) => {
 											>+</button>
 											 <h6>{fav.quantity}</h6>
 											<button className="btn btn-success m-1" 
-												onClick={(product) => {
+												onClick={() => {
 													// actions.updateCarShop()
 												}}
 											>-</button>
@@ -69,7 +69,7 @@ export const ResultProducts = ({ data }) => {
 
 									</td>
 
-									  <td className="align-middle">{product.price*productQuantity.length}</td> 
+									  <td className="align-middle">{product.price*fav.quantity}</td> 
 									<td className="align-middle"><button className="button-24">Remove</button></td>
 								</tr>
 							</thead>
@@ -81,7 +81,7 @@ export const ResultProducts = ({ data }) => {
 			<div className="col-md-3">
 				<h3>Order summary</h3>
 				<p>items {store.carShop.length}</p>
-				<p>total cost {}</p>
+				<p>total cost{}</p>
 			</div>
 		</div>
 
