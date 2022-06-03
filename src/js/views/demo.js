@@ -25,7 +25,7 @@
 					 <Link to="/single">
 						 <button className="button-24 m-1">Shop here now</button>
 					</Link>
-					<Link to="/RaceTimeMap">
+					<Link to="/f1trans">
 						 <button className="button-24 m-1">learn more about F1</button>
 					</Link>
 					</div>

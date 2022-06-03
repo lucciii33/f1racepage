@@ -12,11 +12,11 @@ export const Single = () => {
 	return (
 		<div className="d-flex flex-wrap justify-content-center">
 			{store.shop.map((product, index)=><Card  data={{
-                    value1: product.image,
-                    value2: product.description,
-					value3: product.price,
-					value4: product.gender,
-					value5: product.id
+                    image: product.image,
+                    description: product.description,
+					price: product.price,
+					gender: product.gender,
+					id: product.id
                   }}
                   key={index}
 				  />)}
