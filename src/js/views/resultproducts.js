@@ -8,6 +8,7 @@ export const ResultProducts = ({ data }) => {
 	const { store, actions } = useContext(Context);
 	const [productQuantity, setProductQuantity] = useState([]);
 	const [answer, setAnswer] = useState([])
+	const [totalCost, setTotalCost] = useState(0)
 	const params = useParams();
 	var data = useLocation().state;
 	
@@ -20,9 +21,42 @@ export const ResultProducts = ({ data }) => {
 	// 		setProductQuantity([...productQuantity, {...product, quantity: quantity+1  }])
 	// 	  }
 	// }
-	const getTotalCost = (carShop) => {
-		return carShop.reduce((totalCost, { cost: price }) => totalCost + parseFloat(price), 0);
-	  };
+	// const getTotalCost = (carShop) => {
+	// 	return carShop.reduce((totalCost, { cost: price }) => totalCost + parseFloat(price), 0);
+	//   };
+	useEffect(()=>{
+		let resultArray = store.carShop.map((fav)=>{
+			if(fav.quantity > 0){
+				let product = store.shop.find((item)=>{
+					if(fav.product_id == item.id){
+						return item
+					}})
+					return product.price*fav.quantity
+			}
+			
+			})
+			setAnswer(resultArray)
+	},[])
+	useEffect(()=>{
+		let result = getTotalCost()
+		setTotalCost(result)
+	},[answer])
+
+	const createTotalCost=(fav)=>{
+		let product = store.shop.find((item)=>{
+			if(fav.product_id == item.id){
+				return item
+			}})
+			let result=product.price
+			setAnswer([...answer, result])
+	}
+	const getTotalCost=()=>{
+		let totalcost = answer.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+		return totalcost
+	}
+
+
+
 	return (
 		<div className="d-flex row"> 
 		<div className="col-md-9">
@@ -55,7 +89,8 @@ export const ResultProducts = ({ data }) => {
 
 											<button className="btn btn-danger m-1" 
 												onClick={() => {
-													// addQuantity(product)
+													createTotalCost(fav)
+													
 													actions.updateCarShop(fav.id, fav.quantity)
 												}}
 											>+</button>
@@ -81,7 +116,7 @@ export const ResultProducts = ({ data }) => {
 			<div className="col-md-3">
 				<h3>Order summary</h3>
 				<p>items {store.carShop.length}</p>
-				<p>total cost{}</p>
+				<p>total cost: {totalCost}</p>
 			</div>
 		</div>
 
