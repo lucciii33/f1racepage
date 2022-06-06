@@ -58,7 +58,8 @@ export const ResultProducts = ({ data }) => {
 
 
 	return (
-		<div className="d-flex row"> 
+		<div className="d-flex row m-5"> 
+		<br/>
 		<div className="col-md-9">
 			{
 				store.carShop.map((fav) => {
@@ -70,7 +71,7 @@ export const ResultProducts = ({ data }) => {
 					})
 					return (
 
-						<table className="table table-light table-striped">
+						<table className="table table-dark table-striped">
 							<thead>
 								<tr>
 									<th>image</th>
@@ -113,10 +114,22 @@ export const ResultProducts = ({ data }) => {
 				})
 			}
 		</div >
-			<div className="col-md-3">
-				<h3>Order summary</h3>
-				<p>items {store.carShop.length}</p>
-				<p>total cost: {totalCost}</p>
+			<div className="col-md-3 totalcost text-center">
+				<div>
+				<h3 className="textsummary">Order summary</h3>
+				<p className="textsummary">Items: <span className="text-dark"><strong> {store.carShop.length}</strong></span></p>
+				<p className="textsummary">Total cost: <span className="text-dark"><strong>${totalCost}</strong></span> </p>
+				<div class="dropdown">
+  <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    delivery Fees
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">international</a></li>
+    <li><a class="dropdown-item" href="#">USA</a></li>
+  </ul>
+</div>
+				<button className="btn btn-success mt-3">Checkout</button>
+				</div>
 			</div>
 		</div>
 

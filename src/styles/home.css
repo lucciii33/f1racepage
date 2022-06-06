@@ -123,3 +123,14 @@ body{
 .redbullcar{
 color: #000B8D;
 }
+
+.totalcost{
+    background-color: #16f2e1;
+    height: 250px;
+}
+.textsummary{
+    color: black;
+}
+.textsummary1{
+    color: green;
+}
