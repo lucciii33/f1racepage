@@ -16,7 +16,7 @@ export const AboutUs = props => {
 					<h1>Maiele Racing</h1>
 					<h3>Lorem ipsum lorem ipsum in 2022</h3>
 					<h5>Lorem ipsum is placeholder text commonly used in the graphic.</h5>
-					<p className="m-4">for all those fans rigth there, also you have a lot information about f1 like races, times, tracks etc</p>
+					<p className="ms-2">for all those fans rigth there, also you have a lot information about f1 like races, times, tracks etc <br/>Lorem ipsum is placeholder text commonly used in the graphic</p>
 					<button className="button-24">visit here!</button>
 				</div>
 			<img src={about} style={{width: "100%", height: "100vh"}}>

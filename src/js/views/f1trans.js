@@ -19,10 +19,10 @@ export const F1Trans = props => {
 					<h6>click here an enjoy</h6>
 					</div>
 					<Link to="/RaceTimeMap" className="">
-						 <button className="btn btn-outline-danger m-3"> visit F1 the caledar</button>
+						 <button className="btn btn-danger m-3"> visit F1 the caledar</button>
 					</Link>
 					<Link to="/driversresults">
-						 <button className="btn btn-outline-warning">check lasts result</button>
+						 <button className="btn btn-warning">check lasts result</button>
 					</Link>
 				</div>
 			<img src={redbullcar} style={{width: "100%", height: "100vh"}}>

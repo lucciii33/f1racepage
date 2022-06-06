@@ -126,11 +126,26 @@ color: #000B8D;
 
 .totalcost{
     background-color: #16f2e1;
-    height: 250px;
+    height: 300px;
 }
 .textsummary{
     color: black;
 }
 .textsummary1{
     color: green;
+}
+.checkboxcolor{
+    width: 1.1em;
+    height: 1.1em;
+    background-color: transparent;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid black;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.checkboxcolor:checked {
+    background-color: black;
 }

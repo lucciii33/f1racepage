@@ -71,7 +71,7 @@ export const ResultProducts = ({ data }) => {
 					})
 					return (
 
-						<table className="table table-dark table-striped">
+						<table className="table table-light table-striped">
 							<thead>
 								<tr>
 									<th>image</th>
@@ -95,7 +95,7 @@ export const ResultProducts = ({ data }) => {
 													actions.updateCarShop(fav.id, fav.quantity)
 												}}
 											>+</button>
-											 <h6>{fav.quantity}</h6>
+											 <p>{fav.quantity}</p>
 											<button className="btn btn-success m-1" 
 												onClick={() => {
 													// actions.updateCarShop()
@@ -106,7 +106,7 @@ export const ResultProducts = ({ data }) => {
 									</td>
 
 									  <td className="align-middle">{product.price*fav.quantity}</td> 
-									<td className="align-middle"><button className="button-24">Remove</button></td>
+									<td className="align-middle"><button className="button-24" onClick={() => actions.deleteCarShop(fav.id)}>Remove</button></td>
 								</tr>
 							</thead>
 						</table>
@@ -119,15 +119,18 @@ export const ResultProducts = ({ data }) => {
 				<h3 className="textsummary">Order summary</h3>
 				<p className="textsummary">Items: <span className="text-dark"><strong> {store.carShop.length}</strong></span></p>
 				<p className="textsummary">Total cost: <span className="text-dark"><strong>${totalCost}</strong></span> </p>
-				<div class="dropdown">
-  <button className="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    delivery Fees
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">international</a></li>
-    <li><a class="dropdown-item" href="#">USA</a></li>
-  </ul>
-</div>
+				<div className="p-0">
+					<div className="d-flex inputbox">
+				<input type='checkbox' className="checkboxcolor"></input>
+				<label  className="m-0"></label>
+					National Shipping(USA)
+					</div>
+					<div className="d-flex inputbox">
+				<input type='checkbox' className="checkboxcolor"></input>
+				<label></label>
+					National Shipping(USA)
+					</div>
+				</div>
 				<button className="btn btn-success mt-3">Checkout</button>
 				</div>
 			</div>
