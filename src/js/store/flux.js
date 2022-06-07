@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us47.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();
@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           alert("That product exist");
         } else {
         //   let favoriteString = favorites.toString();
-          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite", {
+          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us47.gitpod.io/favorite", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		getCarShop: ()=> {
-			fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite", {
+			fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us47.gitpod.io/favorite", {
 				method: "GET",
 				headers: {
 				  "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			deleteCarShop: (id) => {
 				const store = getStore()
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite/" + id, {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us47.gitpod.io/favorite/" + id, {
 				  method: "DELETE",
 				  headers: {
 					"Content-Type": "application/json",
@@ -111,7 +111,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			  updateCarShop: (id, quantity )=>{
 				  const store = getStore()
-				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us46.gitpod.io/favorite/${id}`, {
+				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us47.gitpod.io/favorite/${id}`, {
 					method: "PUT",
 					headers: {
 					  "Content-Type": "application/json",

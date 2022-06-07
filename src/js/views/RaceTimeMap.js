@@ -10,17 +10,11 @@ export const RaceTimeMap = () => {
 	const params = useParams();
 	return (
 		<div>
-			<div className="m-2 d-flex justify-content-center">
-
-				<Link to="/driversresults">
-					<button className="button-24">See drivers Results</button>
-				</Link>
-			</div>
 			<div className="d-flex flex-wrap justify-content-center">
 
 				{store.RaceSchedule.map((race, i) => {
 					return (
-						<div className="racesbox m-2" key={i}>
+						<div className="racesbox bg-light m-2" key={i}>
 
 							<div className="text-center">
 								<h1>Qualifying</h1>
