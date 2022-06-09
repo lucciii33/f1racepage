@@ -8,22 +8,11 @@ export const ResultProducts = ({ data }) => {
 	const { store, actions } = useContext(Context);
 	const [productQuantity, setProductQuantity] = useState([]);
 	const [answer, setAnswer] = useState([])
+	const [answerLess, setAnswerLess] = useState([])
 	const [totalCost, setTotalCost] = useState(0)
 	const params = useParams();
 	var data = useLocation().state;
 	
-	// const addQuantity=(product)=>{
-	// 	const exist = productQuantity.find(x => x.id === product.id);
-	// 	if(exist){
-	// 		setProductQuantity(productQuantity.map(x => x.id === product.id ? {...exist, quantity: exist.quantity + 1}: x ))
-	// 	  }
-	// 	  else {
-	// 		setProductQuantity([...productQuantity, {...product, quantity: quantity+1  }])
-	// 	  }
-	// }
-	// const getTotalCost = (carShop) => {
-	// 	return carShop.reduce((totalCost, { cost: price }) => totalCost + parseFloat(price), 0);
-	//   };
 	useEffect(()=>{
 		let resultArray = store.carShop.map((fav)=>{
 			if(fav.quantity > 0){
@@ -54,6 +43,27 @@ export const ResultProducts = ({ data }) => {
 		let totalcost = answer.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
 		return totalcost
 	}
+////////////////////////////////////here start the minus
+// useEffect(()=>{
+// 	let resultless = getTotalCostless()
+// 	setTotalCost(resultless)
+// },[answerLess])
+// const createTotalCostless=(fav)=>{
+// 	let product = store.shop.find((item)=>{
+// 		if(fav.product_id == item.id){
+// 			return item
+// 		}})
+// 		let resultLess=product.price
+// 		setAnswerLess([...answerLess, resultLess])
+// }
+// const getTotalCostless=()=>{
+// 	 let totalcostLess = answerLess.map(value)=>{
+
+// 		 return value - 1; 
+// 	 }  
+// 	return totalCost
+// 	}
+
 
 
 
@@ -98,7 +108,9 @@ export const ResultProducts = ({ data }) => {
 											 <p>{fav.quantity}</p>
 											<button className="btn btn-success m-1" 
 												onClick={() => {
-													// actions.updateCarShop()
+													createTotalCostless(fav)
+													
+													actions.updateCarShopless(fav.id, fav.quantity)
 												}}
 											>-</button>
 										</div>
