@@ -158,7 +158,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						  })
 						  // newFavorites = [...newFavorites, data]
 						  setStore({carShop: newFavorites})
-  
 					  } )
 					  .catch((err) => console.log(err));
 				  }

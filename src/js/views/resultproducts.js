@@ -6,13 +6,12 @@ import { Context } from "../store/appContext";
 
 export const ResultProducts = ({ data }) => {
 	const { store, actions } = useContext(Context);
-	const [productQuantity, setProductQuantity] = useState([]);
+	// const [productQuantity, setProductQuantity] = useState([]);
+	// const [answerLess, setAnswerLess] = useState([])
 	const [answer, setAnswer] = useState([])
-	const [answerLess, setAnswerLess] = useState([])
 	const [totalCost, setTotalCost] = useState(0)
 	const params = useParams();
 	var data = useLocation().state;
-	
 	useEffect(()=>{
 		let resultArray = store.carShop.map((fav)=>{
 			if(fav.quantity > 0){
@@ -21,9 +20,12 @@ export const ResultProducts = ({ data }) => {
 						return item
 					}})
 					return product.price*fav.quantity
+			}else{
+				
 			}
 			
 			})
+			console.log(resultArray)
 			setAnswer(resultArray)
 	},[])
 	useEffect(()=>{
@@ -41,8 +43,11 @@ export const ResultProducts = ({ data }) => {
 	}
 	const getTotalCost=()=>{
 		let totalcost = answer.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+		console.log(totalcost)
 		return totalcost
+		
 	}
+
 ////////////////////////////////////here start the minus
 // useEffect(()=>{
 // 	let resultless = getTotalCostless()
@@ -108,8 +113,7 @@ export const ResultProducts = ({ data }) => {
 											 <p>{fav.quantity}</p>
 											<button className="btn btn-success m-1" 
 												onClick={() => {
-													createTotalCostless(fav)
-													
+													getTotalCost(answer-fav.quantity)
 													actions.updateCarShopless(fav.id, fav.quantity)
 												}}
 											>-</button>
