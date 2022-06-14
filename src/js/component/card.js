@@ -23,8 +23,8 @@ export const Card = ({data}) => {
               </Link>
 			  <button className={colorButton == "button-25" ? "button-24" : "button-25"}
                 onClick={() => {
-                  actions.addCarShop(data.price, data.description, data.image, data.id, 1), 
-				  actions.getCarShop()
+                  actions.addCarShop(data.price, data.description, data.image, data.id, 1);
+				//   actions.getCarShop();
 				   setColorButton("button-24");
                 }}
 				

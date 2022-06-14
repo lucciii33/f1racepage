@@ -58,7 +58,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           (item) => item.id == product_id
         );
         if (found) {
-          alert("That product exist");
+          alert("That item is on the cart already!!");
         } else {
         //   let favoriteString = favorites.toString();
           fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us47.gitpod.io/favorite", {
@@ -76,8 +76,14 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
             .then((response) => response.json())
             .then((data) =>{
-				console.log(data)
+				if(data.message){
+					alert(data.message)
+			}else{
+				setStore({ carShop: data })
+			}
+
 			} )
+
             .catch((err) => console.log(err));
         }
 		},
