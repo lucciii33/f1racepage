@@ -130,7 +130,12 @@ export const ResultProducts = ({ data }) => {
 									</td>
 
 									  <td className="align-middle">{product.price*fav.quantity}</td> 
-									<td className="align-middle"><button className="button-24" onClick={() => actions.deleteCarShop(fav.id)}>Remove</button></td>
+									<td className="align-middle"><button className="button-24" 
+									onClick={() => {
+										actions.deleteCarShop(fav.id)
+										reduceTotalCost(fav)
+									
+									}}>Remove</button></td>
 								</tr>
 							</thead>
 						</table>
