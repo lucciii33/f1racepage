@@ -49,6 +49,15 @@ export const ResultProducts = ({ data }) => {
 			let result=product.price
 			setAnswer([...answer, -result])
 	}
+	const reduceTotalCostDelete=(fav)=>{
+		let product = store.shop.find((item)=>{
+			if(fav.product_id == item.id){
+				return item
+			}})
+			let result=product.price
+			let value = product.quantity
+			setAnswer([...answer, -value])
+	}
 	const getTotalCost=()=>{
 		let totalcost = answer.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
 		console.log(totalcost)
@@ -132,8 +141,8 @@ export const ResultProducts = ({ data }) => {
 									  <td className="align-middle">{product.price*fav.quantity}</td> 
 									<td className="align-middle"><button className="button-24" 
 									onClick={() => {
+										reduceTotalCostDelete(fav)
 										actions.deleteCarShop(fav.id)
-										reduceTotalCost(fav)
 									
 									}}>Remove</button></td>
 								</tr>
