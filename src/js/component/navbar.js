@@ -21,13 +21,13 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
-				<a className="navbar-brand fw-bold fs-4" href="#" >MAIELE RACING</a>
+				<Link to="/demo"><a className="navbar-brand fw-bold fs-4" href="#" >MAIELE RACING</a></Link>
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-						<Link to="/" className="text-decoration-none">
+						<Link to="/demo" className="text-decoration-none">
 							<li className="nav-item">
 								<a className="nav-link active" aria-current="page" href="#">Home</a>
 							</li>
@@ -54,9 +54,9 @@ export const Navbar = () => {
 						</Link>
 					</ul>
 					<div className="buttons d-flex">
-						<a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-user-plus me-1"></i>register</a>
-						<a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-sign-out-alt me-1"></i>
-							Sign in</a>
+						<Link to="/register"><a href="" className="btn btn-outline-dark m-1" ><i className="fas fa-user-plus me-1"></i>register</a></Link>
+						<Link to="/login"><button href="" className="btn btn-outline-dark m-1" ><i className="fas fa-sign-out-alt me-1"></i>Sign in</button></Link>
+							
 						<ul className="navbar-nav ">
 							<li className="nav-item dropdown">
 								<button

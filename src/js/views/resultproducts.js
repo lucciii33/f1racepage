@@ -12,43 +12,43 @@ export const ResultProducts = ({ data }) => {
 	const [totalCost, setTotalCost] = useState(0)
 	const params = useParams();
 	var data = useLocation().state;
-	useEffect(()=>{
-		let resultArray = store.carShop.map((fav)=>{
-			if(fav.quantity > 0){
-				let product = store.shop.find((item)=>{
-					if(fav.product_id == item.id){
-						return item
-					}})
-					return product.price*fav.quantity
-			}else{
+	// useEffect(()=>{
+	// 	let resultArray = store.carShop.map((fav)=>{
+	// 		if(fav.quantity > 0){
+	// 			let product = store.shop.find((item)=>{
+	// 				if(fav.product_id == item.id){
+	// 					return item
+	// 				}})
+	// 				return product.price*fav.quantity
+	// 		}else{
 				
-			}
+	// 		}
 			
-			})
-			console.log(resultArray)
-			setAnswer(resultArray)
-	},[])
-	useEffect(()=>{
-		let result = getTotalCost()
-		setTotalCost(result)
-	},[answer])
+	// 		})
+	// 		console.log(resultArray)
+	// 		setAnswer(resultArray)
+	// },[])
+	// useEffect(()=>{
+	// 	let result = getTotalCost()
+	// 	setTotalCost(result)
+	// },[answer])
 
-	const createTotalCost=(fav)=>{
-		let product = store.shop.find((item)=>{
-			if(fav.product_id == item.id){
-				return item
-			}})
-			let result=product.price
-			setAnswer([...answer, result])
-	}
-	const reduceTotalCost=(fav)=>{
-		let product = store.shop.find((item)=>{
-			if(fav.product_id == item.id){
-				return item
-			}})
-			let result=product.price
-			setAnswer([...answer, -result])
-	}
+	// const createTotalCost=(fav)=>{
+	// 	let product = store.shop.find((item)=>{
+	// 		if(fav.product_id == item.id){
+	// 			return item
+	// 		}})
+	// 		let result=product.price
+	// 		setAnswer([...answer, result])
+	// }
+	// const reduceTotalCost=(fav)=>{
+	// 	let product = store.shop.find((item)=>{
+	// 		if(fav.product_id == item.id){
+	// 			return item
+	// 		}})
+	// 		let result=product.price
+	// 		setAnswer([...answer, -result])
+	// }
 	// const reduceTotalCostDelete=(fav)=>{
 	// 	let product = store.shop.find((item)=>{
 	// 		if(fav.product_id == item.id){
@@ -64,31 +64,6 @@ export const ResultProducts = ({ data }) => {
 		return totalcost
 		
 	}
-
-////////////////////////////////////here start the minus
-// useEffect(()=>{
-// 	let resultless = getTotalCostless()
-// 	setTotalCost(resultless)
-// },[answerLess])
-// const createTotalCostless=(fav)=>{
-// 	let product = store.shop.find((item)=>{
-// 		if(fav.product_id == item.id){
-// 			return item
-// 		}})
-// 		let resultLess=product.price
-// 		setAnswerLess([...answerLess, resultLess])
-// }
-// const getTotalCostless=()=>{
-// 	 let totalcostLess = answerLess.map(value)=>{
-
-// 		 return value - 1; 
-// 	 }  
-// 	return totalCost
-// 	}
-
-
-
-
 	return (
 		<div className="d-flex row m-5"> 
 		<br/>

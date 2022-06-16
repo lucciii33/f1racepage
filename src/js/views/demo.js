@@ -20,8 +20,20 @@
  	return (
  		<div className="">
 			 	
-					<div className=" d-flex justify-content-center align-items-center"><img src={F1Car} style={{width:'800px', height: "auto", marginTop: '35px'}}></img></div>
-					<div className="d-flex justify-content-center align-items-center">
+					<div className=" d-flex justify-content-center align-items-center mt-2 row">
+						
+						<div className="mainpagearrow ms-5">
+							<div className="bgarrow position-relative me-4">
+							<i className="fas fa-arrow-left position-absolute top-50 start-50 translate-middle"></i>
+							</div>
+						
+						</div>
+						<img className=""src={F1Car} style={{width:'800px', height: "auto", marginTop: '35px'}}></img>
+						<div className="bgarrowblue m-3">
+					</div>
+					
+					</div>
+					<div className="d-flex justify-content-center align-items-center mb-3">
 					 <Link to="/single">
 						 <button className="button-24 m-1">Shop here now</button>
 					</Link>

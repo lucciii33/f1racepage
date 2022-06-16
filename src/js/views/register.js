@@ -7,13 +7,13 @@ import shop from "../../img/shop1.webp";
 import F1Car from "../../img/prueba.jpeg";
 import about from "../../img/about1.jpg"
 
-export const Login = props => {
+export const Register = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
 		<div className="containerlogin position-relative">
 		<div className="loginbox position-absolute top-50 start-50 translate-middle bg-light">
-			<h1 className="text-center mt-2">Login</h1>
+			<h1 className="text-center mt-2">Register</h1>
 			<form>
 				<div className="mb-3 text-center mt-2">
 					<label for="exampleInputEmail1" className="form-label">Email address</label>
@@ -35,6 +35,6 @@ export const Login = props => {
 	);
 };
 
-Login.propTypes = {
+Register.propTypes = {
 	match: PropTypes.object
 };
