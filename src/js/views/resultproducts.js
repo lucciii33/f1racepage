@@ -49,17 +49,17 @@ export const ResultProducts = ({ data }) => {
 			let result=product.price
 			setAnswer([...answer, -result])
 	}
-	const reduceTotalCostDelete=(fav)=>{
-		let product = store.shop.find((item)=>{
-			if(fav.product_id == item.id){
-				return item
-			}})
-			let result=product.price
-			let value = product.quantity
-			setAnswer([...answer, -value])
-	}
+	// const reduceTotalCostDelete=(fav)=>{
+	// 	let product = store.shop.find((item)=>{
+	// 		if(fav.product_id == item.id){
+	// 			return item
+	// 		}})
+	// 		let result=product.price
+	// 		let value = product.quantity
+	// 		setAnswer([...answer, -value])
+	// }
 	const getTotalCost=()=>{
-		let totalcost = answer.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+		let totalcost = store.carShop.reduce((totalPrice, currentProduct) => totalPrice + (currentProduct.product.price * currentProduct.quantity), 0)
 		console.log(totalcost)
 		return totalcost
 		
@@ -122,7 +122,7 @@ export const ResultProducts = ({ data }) => {
 
 											<button className="btn btn-danger m-1" 
 												onClick={() => {
-													createTotalCost(fav)
+													// createTotalCost(fav)
 													
 													actions.updateCarShop(fav.id, fav.quantity)
 												}}
@@ -130,7 +130,7 @@ export const ResultProducts = ({ data }) => {
 											 <p>{fav.quantity}</p>
 											<button className="btn btn-success m-1" 
 												onClick={() => {
-													reduceTotalCost(fav)
+													// reduceTotalCost(fav)
 													actions.updateCarShopless(fav.id, fav.quantity)
 												}}
 											>-</button>
@@ -141,7 +141,7 @@ export const ResultProducts = ({ data }) => {
 									  <td className="align-middle">{product.price*fav.quantity}</td> 
 									<td className="align-middle"><button className="button-24" 
 									onClick={() => {
-										reduceTotalCostDelete(fav)
+										
 										actions.deleteCarShop(fav.id)
 									
 									}}>Remove</button></td>
@@ -156,7 +156,7 @@ export const ResultProducts = ({ data }) => {
 				<div>
 				<h3 className="textsummary">Order summary</h3>
 				<p className="textsummary">Items: <span className="text-dark"><strong> {store.carShop.length}</strong></span></p>
-				<p className="textsummary">Total cost: <span className="text-dark"><strong>${totalCost}</strong></span> </p>
+				<p className="textsummary">Total cost: <span className="text-dark"><strong>${getTotalCost()}</strong></span> </p>
 				<div className="p-0">
 					<div className="d-flex inputbox">
 				<input type='checkbox' className="checkboxcolor"></input>

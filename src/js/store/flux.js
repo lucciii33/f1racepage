@@ -79,6 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				if(data.message){
 					alert(data.message)
 			}else{
+				data.price = price
 				setStore({ carShop: data })
 			}
 
