@@ -11,7 +11,7 @@ export const DriverResults = () => {
 	return (
 		<div className="ms-auto me-auto">
 			<div>
-				<h1 className="text-center text-dark mt-3">MONACO</h1>
+				{/* <h1 className="text-center text-dark mt-3">AZERBAIJAN</h1> */}
 			</div>
 			{store.driverResult.map((dri, i) => {
 
@@ -38,7 +38,7 @@ export const DriverResults = () => {
 									<td className="align-middle" >{dri.Constructor.name}</td>
 									<td className="align-middle">{dri.laps}</td>
 									<td className="align-middle">{dri.grid}</td>
-									<td className="align-middle">{dri.FastestLap.Time.time}</td>
+									<td className="align-middle">{dri.Time.time}</td>
 									<td className="align-middle">{dri.status}</td>
 									<td className="align-middle" >{dri.points}</td>
 
