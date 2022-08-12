@@ -10,13 +10,13 @@ export const DriverResults = () => {
 	const params = useParams();
 	return (
 		<div className="ms-auto me-auto">
-			<div>
-				{/* <h1 className="text-center text-dark mt-3">AZERBAIJAN</h1> */}
+			<div className="text-center mt-2">
+				<h1>{store.raceName}</h1>
 			</div>
 			{store.driverResult.map((dri, i) => {
 
 				return (
-					<div className="m-5" key={i}>
+					<div className="m-4" key={i}>
 						<table className="table table-light table-striped">
 							<thead>
 								<tr>

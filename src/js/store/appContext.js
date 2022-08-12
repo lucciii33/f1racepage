@@ -26,6 +26,7 @@ const injectContext = PassedComponent => {
 			state.actions.getShopData();
 			state.actions.getF1Drivers();
 			state.actions.getCarShop();
+			state.actions.getF1RaceName();
 			window.store = state.store;
 		}, []);
 

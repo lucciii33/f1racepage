@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			shop:[],
 			carShop: [],
 			driverResult: [],
+			raceName: [],
 			
 		},
 		actions: {
@@ -36,9 +37,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.error(err);
 					});
 			},
+
+			getF1RaceName: () => {
+				fetch("https://ergast.com/api/f1/current/last/results.json", {
+				})
+					.then(response => {
+						return response.json();
+					})
+					.then(data => {
+						console.log(data.MRData.RaceTable.Races[0].raceName)
+						return setStore({ raceName: data.MRData.RaceTable.Races[0].raceName})
+					})
+					.catch(err => {
+						console.error(err);
+					});
+			},
 			
 			getShopData: () => {
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us54.gitpod.io/product", {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us60.gitpod.io/product", {
 				})
 					.then(response => {
 						return response.json();
@@ -61,7 +77,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           alert("That item is on the cart already!!");
         } else {
         //   let favoriteString = favorites.toString();
-          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us54.gitpod.io/favorite", {
+          fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us60.gitpod.io/favorite", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -90,7 +106,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		getCarShop: ()=> {
-			fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us54.gitpod.io/favorite", {
+			fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us60.gitpod.io/favorite", {
 				method: "GET",
 				headers: {
 				  "Content-Type": "application/json",
@@ -105,7 +121,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			deleteCarShop: (id) => {
 				const store = getStore()
-				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us54.gitpod.io/favorite/" + id, {
+				fetch("https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us60.gitpod.io/favorite/" + id, {
 				  method: "DELETE",
 				  headers: {
 					"Content-Type": "application/json",
@@ -118,7 +134,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			  updateCarShop: (id, quantity )=>{
 				  const store = getStore()
-				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us54.gitpod.io/favorite/${id}`, {
+				fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us60.gitpod.io/favorite/${id}`, {
 					method: "PUT",
 					headers: {
 					  "Content-Type": "application/json",
@@ -145,7 +161,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				updateCarShopless: (id, quantity )=>{
 					const store = getStore()
-				  fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us54.gitpod.io/favorite/${id}`, {
+				  fetch(`https://3000-lucciii33-f1pageraceback-hfcp0h4mufo.ws-us60.gitpod.io/favorite/${id}`, {
 					  method: "PUT",
 					  headers: {
 						"Content-Type": "application/json",
